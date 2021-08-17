@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backgroundSU"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/signuppage"
+    tools:context=".SignUp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1SU"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024">
+
+        <ImageButton
+            android:id="@+id/backbtnSU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/back"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
+
+        <ImageView
+            android:id="@+id/logoSU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/telukidsicon"
+            android:contentDescription="@string/todo" />
+
+        <ImageView
+            android:id="@+id/signupSU"
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/signuptitle"
+            tools:ignore="ImageContrastCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2SU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="52dp"
+        android:layout_marginRight="52dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1SU"
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/firstnameSU"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="50"
+            android:background="@drawable/firstnameholder"
+            android:ems="10"
+            android:fontFamily="@font/leaguespartan_bold"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="15sp"
+            android:textColorHint="#D3CEB5"
+            android:textSize="12sp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+            android:importantForAutofill="no" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="35dp" />
+
+        <EditText
+            android:id="@+id/lastnameSU"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="50"
+            android:background="@drawable/lastnameholder"
+            android:ems="10"
+            android:fontFamily="@font/leaguespartan_bold"
+            android:hint="@string/last_name"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="15sp"
+            android:textColorHint="#D3CEB5"
+            android:textSize="12sp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3SU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="52dp"
+        android:layout_marginRight="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2SU"
+        app:layout_constraintVertical_bias="0.023">
+
+        <EditText
+            android:id="@+id/emailaddressSU"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/emailaddressholder"
+            android:ems="10"
+            android:fontFamily="@font/leaguespartan_bold"
+            android:hint="@string/email_address"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="15sp"
+            android:textColorHint="#D3CEB5"
+            android:textSize="12sp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/usernameSU"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/usernameholder"
+            android:ems="10"
+            android:fontFamily="@font/leaguespartan_bold"
+            android:hint="@string/username"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="15sp"
+            android:textColorHint="#D3CEB5"
+            android:textSize="12sp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/passwordSU"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/passwordholder"
+            android:ems="10"
+            android:fontFamily="@font/leaguespartan_bold"
+            android:hint="@string/password_at_least_8_characters"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingHorizontal="15sp"
+            android:textColorHint="#D3CEB5"
+            android:textSize="12sp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/confirmpasswordSU"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/confirmpasswordholder"
+            android:ems="10"
+            android:fontFamily="@font/leaguespartan_bold"
+            android:hint="@string/confirm_password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingHorizontal="15sp"
+            android:textColorHint="#D3CEB5"
+            android:textSize="12sp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/signupbtnSU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/todo"
+        android:foregroundGravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3SU"
+        app:layout_constraintVertical_bias="0.147"
+        app:srcCompat="@drawable/signupbtn"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backgroundSL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/signuppage"
+    tools:context=".SuccessfulLogin">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1SL"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024">
+
+        <ImageButton
+            android:id="@+id/backbtnSL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/todo"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/back"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
+
+        <ImageView
+            android:id="@+id/logoSL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/telukidsicon" />
+
+        <ImageView
+            android:id="@+id/successSL"
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/successfultxtsl" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2SL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="52dp"
+        android:layout_marginRight="52dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:weightSum="100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1SL"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/iconSL"
+            android:layout_width="match_parent"
+            android:layout_height="241dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/tigerlogo" />
+
+        <ImageView
+            android:id="@+id/greetingsSL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/havefuntxt" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
