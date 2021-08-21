@@ -12,10 +12,12 @@
         android:id="@+id/telukidsLogoSS"
         android:layout_width="207dp"
         android:layout_height="204dp"
+        android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499"
-        app:srcCompat="@drawable/telukidsicon" />
+        app:srcCompat="@drawable/teluicon1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
