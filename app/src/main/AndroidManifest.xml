@@ -20,6 +20,7 @@
         <activity
             android:name=".SignUpOrLogInPage"
             android:exported="true" />
+
         <activity
             android:name=".SplashScreen"
             android:exported="true">
@@ -29,6 +30,73 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".AgeSelection"
+            android:exported="true"/>
+
+        <activity
+            android:name=".Homepage3to6"
+            android:exported="true"/>
+
+        <activity
+            android:name=".Homepage7to9"
+            android:exported="true"/>
+
+
+        // Basic Concepts Page
+        <activity
+            android:name=".BConceptsPage"
+            android:exported="true"/>
+
+        <activity
+            android:name=".ShapesChooseMode"
+            android:exported="true"/>
+
+        // Circle Lessons
+        <activity
+            android:name=".CircleHomepage"
+            android:exported="true"/>
+        <activity
+            android:name=".CirclePage1"
+            android:exported="true"/>
+        <activity
+            android:name=".CirclePage2"
+            android:exported="true"/>
+        <activity
+            android:name=".CirclePage3"
+            android:exported="true"/>
+        <activity
+            android:name=".CirclePage4"
+            android:exported="true"/>
+        <activity
+            android:name=".CirclePage5"
+            android:exported="true"/>
+
+
+
+        <activity
+            android:name=".ColorsChooseMode"
+            android:exported="true"/>
+
+        <activity
+            android:name=".NumbersChooseMode"
+            android:exported="true"/>
+
+        <activity
+            android:name=".LessonIntroShapes"
+            android:exported="true"/>
+
+        <activity
+            android:name=".LessonIntroColors"
+            android:exported="true"/>
+
+        <activity
+            android:name=".LessonIntroNumbers"
+            android:exported="true"/>
+
+
+
         <activity
             android:name=".SignUp"
             android:exported="true" />
@@ -38,6 +106,7 @@
         <activity
             android:name=".login"
             android:exported="true" />
+
     </application>
 
 </manifest>
