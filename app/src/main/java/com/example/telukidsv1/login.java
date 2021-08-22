@@ -13,6 +13,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,6 +25,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class login extends AppCompatActivity {
     EditText emailLI,passwordLI;
+    TextView emessageLI;
     ImageButton backbtnLI,forgotpwLI,loginbtnLI;
     FirebaseAuth fAuth;
 
@@ -35,6 +37,7 @@ public class login extends AppCompatActivity {
 
         emailLI = findViewById(R.id.emailaddressLI);
         passwordLI = findViewById(R.id.passwordLI);
+        emessageLI = findViewById(R.id.errormsgLI);
 
         fAuth = FirebaseAuth.getInstance();
 
@@ -52,45 +55,11 @@ public class login extends AppCompatActivity {
         forgotpwLI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(login.this,ForgotPassword.class));
 
-                EditText resetMail = new EditText(v.getContext());
-
-                AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
-                passwordResetDialog.setTitle("Reset Password?");
-                passwordResetDialog.setMessage("Enter your email to reset password.");
-                passwordResetDialog.setView(resetMail);
-
-                passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        //extract email and send reset link
-
-                        String mail = resetMail.getText().toString();
-                        fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Toast.makeText(login.this, "Reset link sent to email.", Toast.LENGTH_SHORT).show();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(login.this,"Error: " +e.getMessage(), Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                    }
-                });
-
-                passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        //close dialog
-                    }
-                });
-
-                passwordResetDialog.create().show();
+                startActivity(new Intent(login.this,ForgotPassword.class));
             }
         });
+
 
         loginbtnLI.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,11 +92,10 @@ public class login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(login.this,"User logged in",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(),SuccessfulLogin.class));
                         }
                         else{
-                            Toast.makeText(login.this,"Error: " + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                            emessageLI.setText(task.getException().getMessage());
                         }
                     }
                 });

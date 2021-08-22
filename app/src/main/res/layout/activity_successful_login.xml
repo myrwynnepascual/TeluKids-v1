@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/telukidsicon" />
+            app:srcCompat="@drawable/teluicon" />
 
         <ImageView
             android:id="@+id/successSL"

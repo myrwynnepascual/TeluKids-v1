@@ -37,8 +37,8 @@
             android:id="@+id/logoSSU"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/telukidsicon"
-            android:contentDescription="@string/todo" />
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/teluicon" />
 
         <ImageView
             android:id="@+id/successSSU"
