@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeluKidsV1">
         <activity
-            android:name=".UserProfile"
+            android:name=".LogoutConfirmation36"
+            android:exported="true" />
+        <activity
+            android:name=".EditProfile36"
+            android:exported="true" />
+        <activity
+            android:name=".UserProfile36"
             android:exported="true" />
         <activity
             android:name=".Homepage7to9"

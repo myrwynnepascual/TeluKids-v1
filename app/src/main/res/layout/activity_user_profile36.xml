@@ -2,14 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/backgroundh36"
+    android:id="@+id/backgroundUP"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg2"
-    tools:context=".Homepage3to6">
+    tools:context=".UserProfile36">
 
     <LinearLayout
-        android:id="@+id/linearLayout1H36"
+        android:id="@+id/linearLayout1UP"
         android:layout_width="371dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -28,7 +28,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/backbtnH36"
+                android:id="@+id/backbtnUP"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:backgroundTint="#00FFFFFF"
@@ -42,38 +42,69 @@
                 android:layout_weight="1" />
 
             <ImageButton
-                android:id="@+id/userprofilebtn"
+                android:id="@+id/helpbtnUP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="0dp"
                 android:backgroundTint="#00FFFFFF"
                 android:contentDescription="@string/todo"
-                app:srcCompat="@drawable/ctgbtnprofile"
+                app:srcCompat="@drawable/setbtnhelp"
                 tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
 
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/logoH36"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/teluiconsmall" />
-
-        <ImageView
-            android:id="@+id/logotitleH36"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="126dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0" />
+
+            <ImageView
+                android:id="@+id/logoUP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/teluiconsmall" />
+
+            <Space
+                android:layout_width="71dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0" />
+
+            <ImageButton
+                android:id="@+id/surveybtnUP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/setbtnsurvey"
+                tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/usersettingsUP"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/txttelukidssmall"
+            app:srcCompat="@drawable/proftxtprofile"
             tools:ignore="ImageContrastCheck" />
     </LinearLayout>
 
+
     <LinearLayout
-        android:id="@+id/linearLayout2H36"
+        android:id="@+id/linearLayout2UP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="52dp"
+        android:layout_marginTop="28dp"
         android:layout_marginRight="52dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
@@ -81,46 +112,50 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.60">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1UP"
+        app:layout_constraintVertical_bias="0">
+
 
         <ImageView
-            android:id="@+id/todayH36"
+            android:id="@+id/usericonUP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/age36txttoday" />
+            app:srcCompat="@drawable/tigerprof" />
+
+        <TextView
+            android:id="@+id/greetingsUP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/leaguespartan_bold"
+            android:gravity="center_horizontal"
+            android:shadowColor="#29000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:textColor="#E9724C"
+            android:textSize="15dp"/>
 
         <ImageButton
-            android:id="@+id/basicconceptsH36"
+            android:id="@+id/editprofilebtnUP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/todo"
             android:foregroundGravity="center_horizontal"
-            app:srcCompat="@drawable/age36btnconcepts"
+            app:srcCompat="@drawable/profbtnedit"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
         <ImageButton
-            android:id="@+id/gmrcH36"
+            android:id="@+id/logoutbtnUP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/todo"
             android:foregroundGravity="center_horizontal"
-            app:srcCompat="@drawable/age36btntopics"
+            app:srcCompat="@drawable/setbtnlogout"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
-
-        <ImageButton
-            android:id="@+id/achivementsH36"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#00FFFFFF"
-            android:contentDescription="@string/todo"
-            android:foregroundGravity="center_horizontal"
-            app:srcCompat="@drawable/age36btnachieve"
-            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

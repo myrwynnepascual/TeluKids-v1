@@ -45,11 +45,6 @@ public class SignUp extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
-        //for returning users
-        // if(fAuth.getCurrentUser() != null){
-           // startActivity(new Intent(getApplicationContext(),SuccessfulSignUp.class));
-            //finish();
-       // }
 
         backbtnSU.setOnClickListener(v -> startActivity(new Intent(SignUp.this,SignUpOrLogInPage.class)));
 
