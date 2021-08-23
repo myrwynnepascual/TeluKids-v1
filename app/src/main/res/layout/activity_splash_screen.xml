@@ -5,19 +5,19 @@
     android:id="@+id/backgroundSS"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bufferpage"
+    android:background="@drawable/bg1"
     tools:context=".SplashScreen">
 
     <ImageView
         android:id="@+id/telukidsLogoSS"
-        android:layout_width="207dp"
-        android:layout_height="204dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/teluicon1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,7 @@
     android:id="@+id/backgroundSOL"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bufferpage"
+    android:background="@drawable/bg1"
     tools:context=".SignUpOrLogInPage">
 
 
@@ -23,34 +23,28 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.021">
 
-        <ImageView
-            android:id="@+id/telukidsTitleSOL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            app:srcCompat="@drawable/telukidstitlesol" />
 
         <ImageView
             android:id="@+id/telukidsLogoSOL"
-            android:layout_width="207dp"
-            android:layout_height="204dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="120dp"
             android:layout_marginBottom="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.499"
-            app:srcCompat="@drawable/teluicon" />
+            app:srcCompat="@drawable/teluicon1" />
 
         <ImageView
             android:id="@+id/letsgetTxtSOL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/letsgettxt" />
+            android:layout_marginTop="50dp"
+            app:srcCompat="@drawable/txtletsgetstarted" />
 
         <ImageButton
             android:id="@+id/signupbtnSOL"
@@ -58,14 +52,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:backgroundTint="#00FFFFFF"
-            app:srcCompat="@drawable/signupbtnsol" />
+            app:srcCompat="@drawable/sulobtnsignup" />
 
         <ImageButton
             android:id="@+id/loginbtnSOL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#00FFFFFF"
-            app:srcCompat="@drawable/loginbtnsol" />
+            app:srcCompat="@drawable/sulobtnlogin" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
