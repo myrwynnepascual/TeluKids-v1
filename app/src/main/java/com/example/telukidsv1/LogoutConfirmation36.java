@@ -34,7 +34,7 @@ public class LogoutConfirmation36 extends AppCompatActivity {
             public void onClick(View v) {
 
                 startActivity(new Intent(LogoutConfirmation36.this,UserProfile36.class));
-
+                finish();
             }
         });
     }

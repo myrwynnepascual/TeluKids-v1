@@ -51,7 +51,6 @@
             android:id="@+id/usersettingsEP36"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
             android:contentDescription="@string/todo"
             app:srcCompat="@drawable/settxtusersettings"
             tools:ignore="ImageContrastCheck" />
@@ -105,6 +104,36 @@
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
         <TextView
+            android:id="@+id/oldpasswordtxtEP36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/leaguespartan_bold"
+            android:shadowColor="#29000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="Old Password"
+            android:textColor="#E9724C"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/oldpasswordEP36"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/suhdremailadd"
+            android:ems="10"
+            android:fontFamily="@font/leaguespartan_bold"
+            android:hint="Required when changing password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingHorizontal="15sp"
+            android:textColorHint="#D3CEB5"
+            android:textSize="12sp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <TextView
             android:id="@+id/npasswordtxtEP36"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -126,9 +155,9 @@
             android:background="@drawable/suhdremailadd"
             android:ems="10"
             android:fontFamily="@font/leaguespartan_bold"
-            android:hint="Optional (at least 8 characters)"
+            android:hint="New Password (at least 8 characters)"
             android:importantForAutofill="no"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:paddingHorizontal="15sp"
             android:textColorHint="#D3CEB5"
             android:textSize="12sp"
@@ -158,7 +187,7 @@
             android:fontFamily="@font/leaguespartan_bold"
             android:hint="Confirm Password"
             android:importantForAutofill="no"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:paddingHorizontal="15sp"
             android:textColorHint="#D3CEB5"
             android:textSize="12sp"
