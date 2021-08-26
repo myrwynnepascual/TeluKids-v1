@@ -2,14 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/backgroundUP36"
+    android:id="@+id/backgroundUP79"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg2"
-    tools:context=".UserProfile36">
+    tools:context=".UserProfile79">
 
     <LinearLayout
-        android:id="@+id/linearLayout1UP36"
+        android:id="@+id/linearLayout1UP79"
         android:layout_width="371dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -28,7 +28,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/backbtnUP36"
+                android:id="@+id/backbtnUP79"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:backgroundTint="#00FFFFFF"
@@ -42,7 +42,7 @@
                 android:layout_weight="1" />
 
             <ImageButton
-                android:id="@+id/helpbtnUP36"
+                android:id="@+id/helpbtnUP79"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="0dp"
@@ -64,7 +64,7 @@
                 android:layout_weight="0" />
 
             <ImageView
-                android:id="@+id/logoUP36"
+                android:id="@+id/logoUP79"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -77,7 +77,7 @@
                 android:layout_weight="0" />
 
             <ImageButton
-                android:id="@+id/surveybtnUP36"
+                android:id="@+id/surveybtnUP79"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
@@ -90,7 +90,7 @@
 
 
         <ImageView
-            android:id="@+id/usersettingsUP36"
+            android:id="@+id/usersettingsUP79"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/todo"
@@ -100,7 +100,7 @@
 
 
     <LinearLayout
-        android:id="@+id/linearLayout2UP36"
+        android:id="@+id/linearLayout2UP79"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="52dp"
@@ -112,18 +112,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1UP36"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1UP79"
         app:layout_constraintVertical_bias="0">
 
 
         <ImageView
-            android:id="@+id/usericonUP36"
+            android:id="@+id/usericonUP79"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/tigerprof" />
 
         <TextView
-            android:id="@+id/greetingsUP36"
+            android:id="@+id/greetingsUP79"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -138,7 +138,7 @@
             android:textSize="20dp"/>
 
         <ImageButton
-            android:id="@+id/editprofilebtnUP36"
+            android:id="@+id/editprofilebtnUP79"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -149,7 +149,7 @@
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
         <ImageButton
-            android:id="@+id/logoutbtnUP36"
+            android:id="@+id/logoutbtnUP79"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#00FFFFFF"

@@ -31,11 +31,11 @@ public class UserProfile36 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile36);
 
-        profIconUP = findViewById(R.id.usericonUP);
-        greetUP = findViewById(R.id.greetingsUP);
-        btnbackUP = findViewById(R.id.backbtnUP);
-        btneditUP = findViewById(R.id.editprofilebtnUP);
-        btnlogoutUP = findViewById(R.id.logoutbtnUP);
+        profIconUP = findViewById(R.id.usericonUP36);
+        greetUP = findViewById(R.id.greetingsUP36);
+        btnbackUP = findViewById(R.id.backbtnUP36);
+        btneditUP = findViewById(R.id.editprofilebtnUP36);
+        btnlogoutUP = findViewById(R.id.logoutbtnUP36);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();

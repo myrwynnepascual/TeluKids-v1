@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -15,89 +17,92 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
-public class Homepage7to9 extends AppCompatActivity {
+public class UserProfile79 extends AppCompatActivity {
 
-    ImageButton btnbackH79,btnUserProf79, btnGMRC79Topics, btnAchievements;
-    String userID, usericon;
-    FirebaseFirestore fStore;
+    ImageButton btnbackUP, btneditUP, btnlogoutUP;
+    ImageView profIconUP;
+    TextView greetUP;
+    String userID, username, usericon;
+
     FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage7to9);
+        setContentView(R.layout.activity_user_profile79);
 
-        btnbackH79 = findViewById(R.id.backbtnH79);
-        btnUserProf79 = findViewById(R.id.userprofilebtn79);
-        btnGMRC79Topics = findViewById(R.id.gmrcH79);
-        btnAchievements = findViewById(R.id.achivementsH79);
+        profIconUP = findViewById(R.id.usericonUP79);
+        greetUP = findViewById(R.id.greetingsUP79);
+        btnbackUP = findViewById(R.id.backbtnUP79);
+        btneditUP = findViewById(R.id.editprofilebtnUP79);
+        btnlogoutUP = findViewById(R.id.logoutbtnUP79);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         userID = fAuth.getCurrentUser().getUid();
 
-
+        //EXTRACTING DATA FROM FIRESTORE
         DocumentReference documentReference = fStore.collection("users").document(userID);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
                 usericon = documentSnapshot.getString("uicon");
+                username = documentSnapshot.getString("username");
 
                 if(usericon.equalsIgnoreCase("tiger")){
-                    btnUserProf79.setImageResource(R.drawable.tigersettings);
+                    profIconUP.setImageResource(R.drawable.tigerprof);
                 }
                 else if(usericon.equalsIgnoreCase("owl")){
-                    btnUserProf79.setImageResource(R.drawable.owlsettings);
+                    profIconUP.setImageResource(R.drawable.owlprof);
                 }
                 else if(usericon.equalsIgnoreCase("lion")){
-                    btnUserProf79.setImageResource(R.drawable.lionsettings);
+                    profIconUP.setImageResource(R.drawable.lionprof);
                 }
                 else if(usericon.equalsIgnoreCase("butterfly")){
-                    btnUserProf79.setImageResource(R.drawable.butterflysettings);
+                    profIconUP.setImageResource(R.drawable.butterflyprof);
                 }
                 else if(usericon.equalsIgnoreCase("fox")){
-                    btnUserProf79.setImageResource(R.drawable.foxsettings);
+                    profIconUP.setImageResource(R.drawable.foxprof);
                 }
                 else if(usericon.equalsIgnoreCase("bee")){
-                    btnUserProf79.setImageResource(R.drawable.beesettings);
+                    profIconUP.setImageResource(R.drawable.beeprof);
                 }
                 else if(usericon.equalsIgnoreCase("cat")){
-                    btnUserProf79.setImageResource(R.drawable.catsettings);
+                    profIconUP.setImageResource(R.drawable.catprof);
                 }
                 else if(usericon.equalsIgnoreCase("chicken")){
-                    btnUserProf79.setImageResource(R.drawable.chickensettings);
+                    profIconUP.setImageResource(R.drawable.chickenprof);
                 }
+
+                greetUP.setText("Hi, " +username + "!");
+
             }
         });
 
 
-        btnbackH79.setOnClickListener(new View.OnClickListener() {
+
+        btnbackUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Homepage7to9.this, CategorySelection.class));
+                startActivity(new Intent(UserProfile79.this,Homepage7to9.class));
             }
         });
 
-        btnUserProf79.setOnClickListener(new View.OnClickListener() {
+        btneditUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Homepage7to9.this, UserProfile79.class));
+                startActivity(new Intent(UserProfile79.this, EditProfile79.class));
             }
         });
 
-        btnGMRC79Topics.setOnClickListener(new View.OnClickListener() {
+        btnlogoutUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(Homepage7to9.this, GMRC79Page.class));
+
+                startActivity(new Intent(UserProfile79.this, LogoutConfirmation36.class));
+
             }
         });
-
-        btnAchievements.setOnClickListener(new View.OnClickListener() {
-             @Override
-            public void onClick(View v) {
-                 //startActivity(new Intent(Homepage7to9.this, Achivements.class));
-            }
-         });
-
     }
 }
