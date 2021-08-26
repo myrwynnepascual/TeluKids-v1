@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -18,8 +19,9 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class UserProfile36 extends AppCompatActivity {
     ImageButton btnbackUP, btneditUP, btnlogoutUP;
+    ImageView profIconUP;
     TextView greetUP;
-    String userID, username;
+    String userID, username, usericon;
 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -29,6 +31,7 @@ public class UserProfile36 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile36);
 
+        profIconUP = findViewById(R.id.usericonUP);
         greetUP = findViewById(R.id.greetingsUP);
         btnbackUP = findViewById(R.id.backbtnUP);
         btneditUP = findViewById(R.id.editprofilebtnUP);
@@ -36,14 +39,43 @@ public class UserProfile36 extends AppCompatActivity {
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
-
         userID = fAuth.getCurrentUser().getUid();
+
+        //EXTRACTING DATA FROM FIRESTORE
         DocumentReference documentReference = fStore.collection("users").document(userID);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+                usericon = documentSnapshot.getString("uicon");
                 username = documentSnapshot.getString("username");
+
+                if(usericon.equalsIgnoreCase("tiger")){
+                    profIconUP.setImageResource(R.drawable.tigerprof);
+                }
+                else if(usericon.equalsIgnoreCase("owl")){
+                    profIconUP.setImageResource(R.drawable.owlprof);
+                }
+                else if(usericon.equalsIgnoreCase("lion")){
+                    profIconUP.setImageResource(R.drawable.lionprof);
+                }
+                else if(usericon.equalsIgnoreCase("butterfly")){
+                    profIconUP.setImageResource(R.drawable.butterflyprof);
+                }
+                else if(usericon.equalsIgnoreCase("fox")){
+                    profIconUP.setImageResource(R.drawable.foxprof);
+                }
+                else if(usericon.equalsIgnoreCase("bee")){
+                    profIconUP.setImageResource(R.drawable.beeprof);
+                }
+                else if(usericon.equalsIgnoreCase("cat")){
+                    profIconUP.setImageResource(R.drawable.catprof);
+                }
+                else if(usericon.equalsIgnoreCase("chicken")){
+                    profIconUP.setImageResource(R.drawable.chickenprof);
+                }
+
                 greetUP.setText("Hi, " +username + "!");
+
             }
         });
 

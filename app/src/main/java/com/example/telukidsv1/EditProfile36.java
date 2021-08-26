@@ -30,6 +30,8 @@ import java.util.Map;
 public class EditProfile36 extends AppCompatActivity {
     ImageButton btnBackEP36,btnSaveEP36,icon1EP36,icon2EP36,icon3EP36,icon4EP36,icon5EP36,icon6EP36,icon7EP36,icon8EP36;
     EditText nUsername,oPassword,nPassword,nCPassword;
+    String userIcon;
+    Boolean userIconSelected = false;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     FirebaseUser user;
@@ -81,6 +83,9 @@ public class EditProfile36 extends AppCompatActivity {
                 icon6EP36.setImageResource(R.drawable.beeselect);
                 icon7EP36.setImageResource(R.drawable.catselect);
                 icon8EP36.setImageResource(R.drawable.chickenselect);
+
+                userIcon = "tiger";
+                userIconSelected = true;
             }
         });
 
@@ -95,6 +100,9 @@ public class EditProfile36 extends AppCompatActivity {
                 icon6EP36.setImageResource(R.drawable.beeselect);
                 icon7EP36.setImageResource(R.drawable.catselect);
                 icon8EP36.setImageResource(R.drawable.chickenselect);
+
+                userIcon = "owl";
+                userIconSelected = true;
             }
         });
 
@@ -109,6 +117,9 @@ public class EditProfile36 extends AppCompatActivity {
                 icon6EP36.setImageResource(R.drawable.beeselect);
                 icon7EP36.setImageResource(R.drawable.catselect);
                 icon8EP36.setImageResource(R.drawable.chickenselect);
+
+                userIcon = "lion";
+                userIconSelected = true;
             }
         });
 
@@ -123,6 +134,9 @@ public class EditProfile36 extends AppCompatActivity {
                 icon6EP36.setImageResource(R.drawable.beeselect);
                 icon7EP36.setImageResource(R.drawable.catselect);
                 icon8EP36.setImageResource(R.drawable.chickenselect);
+
+                userIcon = "butterfly";
+                userIconSelected = true;
             }
         });
 
@@ -137,6 +151,9 @@ public class EditProfile36 extends AppCompatActivity {
                 icon6EP36.setImageResource(R.drawable.beeselect);
                 icon7EP36.setImageResource(R.drawable.catselect);
                 icon8EP36.setImageResource(R.drawable.chickenselect);
+
+                userIcon = "fox";
+                userIconSelected = true;
             }
         });
 
@@ -151,6 +168,9 @@ public class EditProfile36 extends AppCompatActivity {
                 icon6EP36.setImageResource(R.drawable.beeselected);
                 icon7EP36.setImageResource(R.drawable.catselect);
                 icon8EP36.setImageResource(R.drawable.chickenselect);
+
+                userIcon = "bee";
+                userIconSelected = true;
             }
         });
 
@@ -165,6 +185,9 @@ public class EditProfile36 extends AppCompatActivity {
                 icon6EP36.setImageResource(R.drawable.beeselect);
                 icon7EP36.setImageResource(R.drawable.catselected);
                 icon8EP36.setImageResource(R.drawable.chickenselect);
+
+                userIcon = "cat";
+                userIconSelected = true;
             }
         });
 
@@ -179,6 +202,9 @@ public class EditProfile36 extends AppCompatActivity {
                 icon6EP36.setImageResource(R.drawable.beeselect);
                 icon7EP36.setImageResource(R.drawable.catselect);
                 icon8EP36.setImageResource(R.drawable.chickenselected);
+
+                userIcon = "chicken";
+                userIconSelected = true;
             }
         });
 
@@ -186,10 +212,9 @@ public class EditProfile36 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //USERNAME
                 if (!nUsername.getText().toString().isEmpty()){
                     String newUsername = nUsername.getText().toString();
-
-                    DocumentReference docRef = fStore.collection("users").document(user.getUid());
 
                     fStore.runTransaction(new Transaction.Function<Void>() {
                         @Override
@@ -204,13 +229,15 @@ public class EditProfile36 extends AppCompatActivity {
                         @Override
                         public void onSuccess(Void aVoid) {
 
-                            Toast.makeText(EditProfile36.this, "Updated",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(EditProfile36.this, "Username Updated",Toast.LENGTH_SHORT).show();
+
+                            nUsername.getText().clear();
 
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(EditProfile36.this, "Failed",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(EditProfile36.this, "Username Update Failed",Toast.LENGTH_SHORT).show();
                         }
                     });
 
@@ -249,6 +276,10 @@ public class EditProfile36 extends AppCompatActivity {
                                     public void onSuccess(Void aVoid) {
 
                                         Toast.makeText(EditProfile36.this,"Password Updated",Toast.LENGTH_SHORT).show();
+
+                                        oPassword.getText().clear();
+                                        nPassword.getText().clear();
+                                        nCPassword.getText().clear();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override
@@ -265,6 +296,42 @@ public class EditProfile36 extends AppCompatActivity {
                         });
                     }
                 }
+
+                //USER ICON
+                if(userIconSelected.equals(true)){
+                    fStore.runTransaction(new Transaction.Function<Void>() {
+                        @Override
+                        public Void apply(Transaction transaction) throws FirebaseFirestoreException {
+                            DocumentSnapshot snapshot = transaction.get(docRef);
+
+                            transaction.update(docRef, "uicon", userIcon);
+
+                            return null;
+                        }
+                    }).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+
+                            Toast.makeText(EditProfile36.this, "Icon Updated",Toast.LENGTH_SHORT).show();
+
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(EditProfile36.this, "Icon Update Failed",Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+
+                //RESET EVERYTHING
+                icon1EP36.setImageResource(R.drawable.tigerselect);
+                icon2EP36.setImageResource(R.drawable.owlselect);
+                icon3EP36.setImageResource(R.drawable.lionselect);
+                icon4EP36.setImageResource(R.drawable.butterflyselect);
+                icon5EP36.setImageResource(R.drawable.foxselect);
+                icon6EP36.setImageResource(R.drawable.beeselect);
+                icon7EP36.setImageResource(R.drawable.catselect);
+                icon8EP36.setImageResource(R.drawable.chickenselect);
             }
         });
     }
