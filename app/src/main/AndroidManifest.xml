@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeluKidsV1">
         <activity
+            android:name=".CirclePage1"
+            android:exported="true" />
+        <activity
+            android:name=".LessonIntroShapes"
+            android:exported="true" />
+        <activity
+            android:name=".BasicConcepts"
+            android:exported="true" />
+        <activity
             android:name=".LogoutConfirmation79"
             android:exported="true" />
         <activity

@@ -89,7 +89,7 @@ public class Homepage3to6 extends AppCompatActivity {
         btnBConcepts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(Homepage3to6.this, BConceptsPage.class));
+                startActivity(new Intent(Homepage3to6.this, BasicConcepts.class));
             }
         });
 
