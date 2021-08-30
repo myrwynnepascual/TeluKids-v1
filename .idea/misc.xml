@@ -13,9 +13,11 @@
         <entry key="..\:/Projects/app/src/main/res/layout/activity_successful_sign_up.xml" value="0.1909153005464481" />
         <entry key="..\:/Projects/app/src/main/res/layout/activity_successful_sign_up2.xml" value="0.2444078947368421" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/drawable/custom_icon_bg.xml" value="0.14736842105263157" />
-        <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_basic_concepts.xml" value="0.2444078947368421" />
+        <entry key="..\:/TeluKids-v1/app/src/main/res/layout-normal/activity_sign_up_or_log_in_page.xml" value="0.38645833333333335" />
+        <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_basic_concepts.xml" value="0.19" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_category_selection.xml" value="0.25" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_circle_page1.xml" value="0.13717105263157894" />
+        <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_circle_page2.xml" value="0.2444078947368421" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_edit_profile36.xml" value="0.2444078947368421" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_edit_profile79.xml" value="0.2444078947368421" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_forgot_password.xml" value="0.25" />
@@ -37,6 +39,7 @@
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/ageselection.xml" value="0.19022289766970618" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/circlepage1.xml" value="0.38697916666666665" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/logout_dialog_box.xml" value="0.22" />
+        <entry key="..\:/TeluKids-v1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2546052631578947" />
         <entry key="..\:/Users/User/TeluKids-v1/app/src/main/res/layout/activity_successful_login.xml" value="0.10371376811594203" />
       </map>
     </option>

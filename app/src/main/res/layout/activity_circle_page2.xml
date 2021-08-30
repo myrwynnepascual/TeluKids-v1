@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CirclePage1">
-
+    tools:context=".CirclePage2">
 
     <VideoView
-        android:id="@+id/videoCPG1"
+        android:id="@+id/videoCPG2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout1CPG1"
+        android:id="@+id/linearLayout1CPG2"
         android:layout_width="371dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -31,7 +30,7 @@
         app:layout_constraintVertical_bias="0.024">
 
         <ImageButton
-            android:id="@+id/btnbackCPG1"
+            android:id="@+id/btnbackCPG2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:backgroundTint="#00FFFFFF"
@@ -40,4 +39,5 @@
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

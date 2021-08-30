@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TeluKids v1</string>
+    <string name="app_name">TeluKids</string>
     <string name="password_at_least_8_characters">Password (at least 8 characters)</string>
     <string name="username">Username</string>
     <string name="email_address">Email Address</string>
