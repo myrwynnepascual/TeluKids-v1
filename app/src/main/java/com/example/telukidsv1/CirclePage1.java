@@ -15,17 +15,17 @@ public class CirclePage1 extends AppCompatActivity {
         setContentView(R.layout.activity_circle_page1);
 
         VideoView videoView = findViewById(R.id.video_view);
-        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.trybg3;
+        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.circleintro;
         Uri uri = Uri.parse(videoPath);
         videoView.setVideoURI(uri);
 
         videoView.start();
 
-        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        /*videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
                 mp.setLooping(true);
             }
-        });
+        });*/
     }
 }
