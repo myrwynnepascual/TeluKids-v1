@@ -42,7 +42,7 @@ public class LessonIntroShapes extends AppCompatActivity {
         btnnextIntroShapes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LessonIntroShapes.this, CirclePage1.class));
+                startActivity(new Intent(LessonIntroShapes.this, ChooseModeShapes.class));
             }
         });
     }

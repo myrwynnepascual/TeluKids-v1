@@ -47,7 +47,7 @@ public class CirclePage1 extends AppCompatActivity {
         backbtnCPG1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CirclePage1.this,LessonIntroShapes.class));
+                startActivity(new Intent(CirclePage1.this,ChooseModeShapes.class));
             }
         });
 
