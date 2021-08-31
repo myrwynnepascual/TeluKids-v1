@@ -80,6 +80,15 @@
         <activity
             android:name=".login"
             android:exported="true" />
+        <activity
+            android:name=".QuizShapes"
+            android:exported="true" />
+        <activity
+            android:name=".ResultsShapes"
+            android:exported="true" />
+        <activity
+            android:name=".CongratsPageShapes"
+            android:exported="true" />
     </application>
 
 </manifest>
