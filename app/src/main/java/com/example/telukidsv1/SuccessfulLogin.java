@@ -73,7 +73,7 @@ public class SuccessfulLogin extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SuccessfulLogin.this,CategorySelection.class));
+                startActivity(new Intent(SuccessfulLogin.this,AgeSelection.class));
                 finish();
             }
         },5000);
