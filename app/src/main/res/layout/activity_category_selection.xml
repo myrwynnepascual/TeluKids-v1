@@ -5,7 +5,82 @@
     android:id="@+id/backgroundCS"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/signuppage"
+    android:background="@drawable/bg2"
     tools:context=".CategorySelection">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1CS"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024">
+
+
+        <ImageView
+            android:id="@+id/logoCS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/teluiconsmall" />
+
+        <ImageView
+            android:id="@+id/logotitleCS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/txttelukidssmall" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3CS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="52dp"
+        android:layout_marginRight="52dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.50">
+
+        <ImageView
+            android:id="@+id/welcomeCS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/ctgtxtlearner" />
+
+        <ImageButton
+            android:id="@+id/categoryage3to6CS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/todo"
+            android:foregroundGravity="center_horizontal"
+            app:srcCompat="@drawable/ctgbtn36"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+        <ImageButton
+            android:id="@+id/categoryage7to9CS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/todo"
+            android:foregroundGravity="center_horizontal"
+            app:srcCompat="@drawable/ctgbtn79"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

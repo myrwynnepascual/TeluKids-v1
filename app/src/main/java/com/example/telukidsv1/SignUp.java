@@ -23,7 +23,7 @@ public class SignUp extends AppCompatActivity {
     EditText fnameSU,lnameSU,emailSU,usernameSU,passwordSU,confirmpwSU;
     TextView emessageSU;
     ImageButton backbtnSU,signupbtnSU;
-    String userID;
+    String userID,uicon;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
 
@@ -45,11 +45,6 @@ public class SignUp extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
-        //for returning users
-        // if(fAuth.getCurrentUser() != null){
-           // startActivity(new Intent(getApplicationContext(),SuccessfulSignUp.class));
-            //finish();
-       // }
 
         backbtnSU.setOnClickListener(v -> startActivity(new Intent(SignUp.this,SignUpOrLogInPage.class)));
 
@@ -60,6 +55,7 @@ public class SignUp extends AppCompatActivity {
             String username = usernameSU.getText().toString();
             String password = passwordSU.getText().toString().trim();
             String password2 = confirmpwSU.getText().toString().trim();
+            uicon = "tiger";
 
             if(TextUtils.isEmpty(fname)){
                 fnameSU.setError("First Name is Required.");
@@ -119,6 +115,7 @@ public class SignUp extends AppCompatActivity {
                     user.put("lname",lname);
                     user.put("email",email);
                     user.put("username",username);
+                    user.put("uicon",uicon);
 
                     documentReference.set(user).addOnSuccessListener(aVoid -> Log.d("TAG","onSuccess: user profile is created for " +userID));
 
@@ -129,8 +126,6 @@ public class SignUp extends AppCompatActivity {
                     emessageSU.setText(task.getException().getMessage());
                 }
             });
-
-
         });
     }
 }

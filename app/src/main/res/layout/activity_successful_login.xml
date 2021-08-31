@@ -5,51 +5,11 @@
     android:id="@+id/backgroundSL"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/signuppage"
+    android:background="@drawable/bg1"
     tools:context=".SuccessfulLogin">
 
     <LinearLayout
         android:id="@+id/linearLayout1SL"
-        android:layout_width="371dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024">
-
-        <ImageButton
-            android:id="@+id/backbtnSL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#00FFFFFF"
-            android:contentDescription="@string/todo"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/back"
-            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
-
-        <ImageView
-            android:id="@+id/logoSL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/teluicon" />
-
-        <ImageView
-            android:id="@+id/successSL"
-            android:layout_width="match_parent"
-            android:layout_height="87dp"
-            android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/successfultxtsl" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2SL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="52dp"
@@ -60,25 +20,31 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1SL"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
 
         <ImageView
-            android:id="@+id/iconSL"
+            android:id="@+id/successSSL"
             android:layout_width="match_parent"
-            android:layout_height="241dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/slitxtsucess" />
+
+        <ImageView
+            android:id="@+id/iconSSL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/tigerlogo" />
+            app:srcCompat="@drawable/ssulogo" />
 
         <ImageView
-            android:id="@+id/greetingsSL"
+            android:id="@+id/greetingsSSL"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/havefuntxt" />
+            app:srcCompat="@drawable/ssutxthavefun" />
 
     </LinearLayout>
 

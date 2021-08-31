@@ -5,7 +5,7 @@
     android:id="@+id/backgroundSU"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/signuppage"
+    android:background="@drawable/bg2"
     tools:context=".SignUp">
 
     <LinearLayout
@@ -18,7 +18,6 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.024">
@@ -29,7 +28,7 @@
             android:layout_height="match_parent"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/back"
+            app:srcCompat="@drawable/subtnback"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
 
         <ImageView
@@ -37,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/teluicon" />
+            app:srcCompat="@drawable/teluiconsmall" />
 
         <ImageView
             android:id="@+id/signupSU"
@@ -45,7 +44,7 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
             android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/signuptitle"
+            app:srcCompat="@drawable/sutxtsignup"
             tools:ignore="ImageContrastCheck" />
     </LinearLayout>
 
@@ -69,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="50"
-            android:background="@drawable/firstnameholder"
+            android:background="@drawable/suhdrfirstname"
             android:ems="10"
             android:fontFamily="@font/leaguespartan_bold"
             android:hint="@string/first_name"
@@ -89,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="50"
-            android:background="@drawable/lastnameholder"
+            android:background="@drawable/suhdrlastname"
             android:ems="10"
             android:fontFamily="@font/leaguespartan_bold"
             android:hint="@string/last_name"
@@ -105,11 +104,11 @@
         android:id="@+id/linearLayout3SU"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
         android:layout_marginLeft="52dp"
-        android:layout_marginRight="52dp"
         android:layout_marginTop="20dp"
+        android:layout_marginRight="52dp"
         android:layout_marginBottom="20dp"
+        android:gravity="center_vertical"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,7 +122,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/emailaddressholder"
+            android:background="@drawable/suhdremailadd"
             android:ems="10"
             android:fontFamily="@font/leaguespartan_bold"
             android:hint="@string/email_address"
@@ -139,7 +138,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/usernameholder"
+            android:background="@drawable/suhdrusername"
             android:ems="10"
             android:fontFamily="@font/leaguespartan_bold"
             android:hint="@string/username"
@@ -155,7 +154,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/passwordholder"
+            android:background="@drawable/suhdrpwd"
             android:ems="10"
             android:fontFamily="@font/leaguespartan_bold"
             android:hint="@string/password_at_least_8_characters"
@@ -171,7 +170,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/confirmpasswordholder"
+            android:background="@drawable/suhdrconpwd"
             android:ems="10"
             android:fontFamily="@font/leaguespartan_bold"
             android:hint="@string/confirm_password"
@@ -187,13 +186,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:gravity="center_horizontal"
             android:fontFamily="@font/leaguespartan_bold"
-            android:textColor="#E9724C"
+            android:gravity="center_horizontal"
             android:shadowColor="#29000000"
             android:shadowDx="1"
             android:shadowDy="1"
-            android:shadowRadius="2"/>
+            android:shadowRadius="2"
+            android:textColor="#E9724C" />
 
     </LinearLayout>
 
@@ -209,8 +208,8 @@
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3SU"
-        app:layout_constraintVertical_bias="0.147"
-        app:srcCompat="@drawable/signupbtn"
+        app:layout_constraintVertical_bias="0.144"
+        app:srcCompat="@drawable/subtnsignup"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
 
