@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.example.telukidsv1.QuizShapes;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -33,17 +32,18 @@ public class ResultsShapes extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     FirebaseUser user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.results_shapes);
+        TextView totalScoreLabel = findViewById(R.id.totalScoreLabel_Shapes);
+        Button btnNext_Quiz_Shapes = findViewById(R.id.btnNext_Quiz_Shapes);
 
+        fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         user = fAuth.getCurrentUser();
         DocumentReference docRef = fStore.collection("users").document(user.getUid());
-
-        TextView totalScoreLabel = findViewById(R.id.totalScoreLabel_Shapes);
-        Button btnNext_Quiz_Shapes = findViewById(R.id.btnNext_Quiz_Shapes);
 
         score_shapes = getIntent().getIntExtra("RIGHT_ANSWER_COUNT_Shapes", 0);
         totalScoreLabel.setText(score_shapes + " / 5");
@@ -51,7 +51,9 @@ public class ResultsShapes extends AppCompatActivity {
         fStore.runTransaction(new Transaction.Function<Void>() {
             @Override
             public Void apply(@NonNull Transaction transaction) throws FirebaseFirestoreException {
-                transaction.update(docRef, "shapes quiz score: ", score_shapes);
+                DocumentSnapshot snapshot = transaction.get(docRef);
+
+                transaction.update(docRef, "shapes quiz score", score_shapes);
                 return null;
             }
         });
