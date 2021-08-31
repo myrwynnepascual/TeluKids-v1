@@ -51,16 +51,16 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="300dp"
-            android:layout_height="100dp"
+            android:layout_width="304dp"
+            android:layout_height="87dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
             android:src="@drawable/congratulations"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_gravity="center_horizontal"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="10dp"
             app:layout_constraintVertical_bias="0.215" />
 
         <ImageView
@@ -68,7 +68,6 @@
             android:layout_width="190dp"
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
             android:src="@drawable/profile"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +81,6 @@
             android:layout_width="308dp"
             android:layout_height="81dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
             android:src="@drawable/youfinishedtheassessment"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -95,9 +93,9 @@
         <Button
             android:id="@+id/btnReadLesson_Quiz_Shapes"
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/answerbutton"
             android:fontFamily="@font/arialroundedmt"
             android:text="Read a Lesson"
@@ -107,7 +105,7 @@
         <Button
             android:id="@+id/btnGoToHomepage_Quiz_Shapes"
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@drawable/answerbutton"
