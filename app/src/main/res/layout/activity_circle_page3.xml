@@ -6,8 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".CirclePage3">
 
+    <VideoView
+        android:id="@+id/videoCPG3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
-        android:id="@+id/linearLayout1CPG21"
+        android:id="@+id/linearLayout1CPG3"
         android:layout_width="371dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -21,7 +30,7 @@
         app:layout_constraintVertical_bias="0.024">
 
         <ImageButton
-            android:id="@+id/btnbackCPG21"
+            android:id="@+id/btnbackCPG3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:backgroundTint="#00FFFFFF"
@@ -31,7 +40,7 @@
 
 
         <TextView
-            android:id="@+id/tapc21"
+            android:id="@+id/tapCPG3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tap anywhere to continue"

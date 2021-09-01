@@ -15,38 +15,40 @@ import android.widget.TextView;
 import android.widget.VideoView;
 
 public class CirclePage1 extends AppCompatActivity {
-    VideoView videoViewCPG11;
-    TextView instructCPG11;
-    String videoPathCPG11;
-    Uri uriCPG11;
-    ImageButton backbtnCPG11;
+    VideoView videoViewCPG1;
+    TextView instructCPG1;
+    String videoPathCPG1,videoPathCPG12;
+    Uri uriCPG1,uriCPG12;
+    ImageButton backbtnCPG1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_circle_page1);
 
-        videoViewCPG11 = findViewById(R.id.videoCPG1);
-        backbtnCPG11 = findViewById(R.id.btnbackCPG1);
-        instructCPG11 = findViewById(R.id.tapc11);
+        videoViewCPG1 = findViewById(R.id.videoCPG1);
+        backbtnCPG1 = findViewById(R.id.btnbackCPG1);
+        instructCPG1 = findViewById(R.id.tapCPG1);
 
-        videoPathCPG11 = "android.resource://" + getPackageName() + "/" + R.raw.circle11;
-        uriCPG11 = Uri.parse(videoPathCPG11);
-        videoViewCPG11.setVideoURI(uriCPG11);
+        videoPathCPG1 = "android.resource://" + getPackageName() + "/" + R.raw.circle1;
+        uriCPG1 = Uri.parse(videoPathCPG1);
+        videoViewCPG1.setVideoURI(uriCPG1);
 
-        videoViewCPG11.start();
+        videoViewCPG1.start();
 
-        videoViewCPG11.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        videoViewCPG1.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
                 mp.setLooping(true);
             }
         });
 
-        backbtnCPG11.setOnClickListener(new View.OnClickListener() {
+        backbtnCPG1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(CirclePage1.this,ChooseModeShapes.class));
+
             }
         });
 
@@ -54,16 +56,17 @@ public class CirclePage1 extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                instructCPG11.setVisibility(VISIBLE);
+                instructCPG1.setVisibility(VISIBLE);
 
-                videoViewCPG11.setOnClickListener(new View.OnClickListener() {
+                videoViewCPG1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
                         startActivity(new Intent(CirclePage1.this, CirclePage2.class));
+
                     }
                 });
             }
         },13000);
-
     }
 }
