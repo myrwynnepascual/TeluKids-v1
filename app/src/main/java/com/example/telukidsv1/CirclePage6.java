@@ -62,7 +62,7 @@ public class CirclePage6 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        startActivity(new Intent(CirclePage6.this, CirclePage6.class));
+                        startActivity(new Intent(CirclePage6.this, SquarePage1.class));
 
                     }
                 });

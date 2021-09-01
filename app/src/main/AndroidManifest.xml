@@ -12,6 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeluKidsV1">
         <activity
+            android:name=".SquarePage6"
+            android:exported="true" />
+        <activity
+            android:name=".SquarePage5"
+            android:exported="true" />
+        <activity
+            android:name=".SquarePage4"
+            android:exported="true" />
+        <activity
+            android:name=".SquarePage3"
+            android:exported="true" />
+        <activity
+            android:name=".SquarePage2"
+            android:exported="true" />
+        <activity
+            android:name=".SquarePage1"
+            android:exported="true" />
+        <activity
             android:name=".CirclePage6"
             android:exported="true" />
         <activity
