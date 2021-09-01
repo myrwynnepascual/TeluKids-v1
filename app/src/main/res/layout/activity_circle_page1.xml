@@ -39,5 +39,20 @@
             app:srcCompat="@drawable/subtnback"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
 
+
+        <TextView
+            android:id="@+id/tapc11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap anywhere on the screen"
+            android:fontFamily="@font/leaguespartan_bold"
+            android:gravity="center_horizontal"
+            android:shadowColor="#29000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:textColor="#E9724C"
+            android:visibility="invisible"/>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

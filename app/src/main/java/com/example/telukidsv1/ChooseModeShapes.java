@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 
 public class ChooseModeShapes extends AppCompatActivity {
 
-    ImageButton backCMS,learnCMS,assessCMS;
+    ImageButton backCMS,learnCMS,assessCMS,replayCMS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,18 +19,19 @@ public class ChooseModeShapes extends AppCompatActivity {
         backCMS = findViewById(R.id.backbtnCMS);
         learnCMS = findViewById(R.id.learnCMS);
         assessCMS = findViewById(R.id.assessCMS);
+        replayCMS = findViewById(R.id.replayintroCMS);
 
         backCMS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChooseModeShapes.this,LessonIntroShapes.class));
+                startActivity(new Intent(ChooseModeShapes.this,BasicConcepts.class));
             }
         });
 
         learnCMS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChooseModeShapes.this,CirclePage1.class));
+                startActivity(new Intent(ChooseModeShapes.this, CirclePage1.class));
             }
         });
 
@@ -38,6 +39,13 @@ public class ChooseModeShapes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ChooseModeShapes.this,QuizShapes.class));
+            }
+        });
+
+        replayCMS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChooseModeShapes.this,LessonIntroShapes.class));
             }
         });
     }

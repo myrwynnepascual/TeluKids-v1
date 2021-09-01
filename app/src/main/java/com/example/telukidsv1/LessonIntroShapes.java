@@ -1,49 +1,57 @@
 package com.example.telukidsv1;
 
+import static android.view.View.VISIBLE;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.MediaController;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 public class LessonIntroShapes extends AppCompatActivity {
 
-    ImageButton btnbackIntroShapes,btnnextIntroShapes;
+    VideoView videoViewIS;
+    String videoPathIS;
+    Uri uriIS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson_intro_shapes);
 
-        btnbackIntroShapes = findViewById(R.id.btnbackIntroShapes);
-        btnnextIntroShapes = findViewById(R.id.btnnextIntroShapes);
-        VideoView videoView = findViewById(R.id.video_view);
-        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.videoholder;
-        Uri uri = Uri.parse(videoPath);
-        videoView.setVideoURI(uri);
+
+        videoViewIS = findViewById(R.id.videoIS);
+        videoPathIS = "android.resource://" + getPackageName() + "/" + R.raw.shapesintrovideo;
+        uriIS = Uri.parse(videoPathIS);
+        videoViewIS.setVideoURI(uriIS);
 
         MediaController mediaController = new MediaController(this);
-        videoView.setMediaController(mediaController);
-        mediaController.setAnchorView(videoView);
+        videoViewIS.setMediaController(mediaController);
+        mediaController.setAnchorView(videoViewIS);
 
-        videoView.start();
+        videoViewIS.start();
 
 
-        btnbackIntroShapes.setOnClickListener(new View.OnClickListener() {
+        videoViewIS.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(LessonIntroShapes.this, BasicConcepts.class));
+            public void onClick(View v) {
+                startActivity(new Intent(LessonIntroShapes.this,ChooseModeShapes.class));
             }
         });
-        btnnextIntroShapes.setOnClickListener(new View.OnClickListener() {
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
             @Override
-            public void onClick(View view) {
+            public void run() {
                 startActivity(new Intent(LessonIntroShapes.this, ChooseModeShapes.class));
             }
-        });
+        },60000);
+
     }
 }
