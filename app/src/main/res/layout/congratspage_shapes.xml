@@ -99,9 +99,10 @@
             android:background="@drawable/answerbutton"
             android:fontFamily="@font/arialroundedmt"
             android:text="Read a Lesson"
+            android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="18dp"
-            android:textAlignment="center"/>
+            android:textSize="18dp" />
+
         <Button
             android:id="@+id/btnGoToHomepage_Quiz_Shapes"
             android:layout_width="wrap_content"
@@ -111,9 +112,9 @@
             android:background="@drawable/answerbutton"
             android:fontFamily="@font/arialroundedmt"
             android:text="Go to Homepage"
+            android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="18dp"
-            android:textAlignment="center"/>
+            android:textSize="18dp" />
 
     </LinearLayout>>
 </androidx.constraintlayout.widget.ConstraintLayout>
