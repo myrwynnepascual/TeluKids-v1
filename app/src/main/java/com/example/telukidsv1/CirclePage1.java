@@ -24,7 +24,7 @@ public class CirclePage1 extends AppCompatActivity {
         videoViewCPG1 = findViewById(R.id.videoCPG1);
         backbtnCPG1 = findViewById(R.id.btnbackCPG1);
 
-        videoPathCPG1 = "android.resource://" + getPackageName() + "/" + R.raw.circleintro;
+        videoPathCPG1 = "android.resource://" + getPackageName() + "/" + R.raw.circle1;
         uriCPG1 = Uri.parse(videoPathCPG1);
         videoViewCPG1.setVideoURI(uriCPG1);
 
