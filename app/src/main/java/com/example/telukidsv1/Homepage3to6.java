@@ -103,7 +103,7 @@ public class Homepage3to6 extends AppCompatActivity {
         btnAchievements.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(Homepage3to6.this, Achievements.class));
+                startActivity(new Intent(Homepage3to6.this, Achievements3to6.class));
             }
         });
 

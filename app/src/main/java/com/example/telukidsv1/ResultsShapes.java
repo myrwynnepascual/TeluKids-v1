@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,16 +29,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ResultsShapes extends AppCompatActivity {
-    private int score_shapes;
+    private int initial_score_shapes, score_shapes;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     FirebaseUser user;
-
+    String achievement_shapes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.results_shapes);
         TextView totalScoreLabel = findViewById(R.id.totalScoreLabel_Shapes);
+        ImageView imgTrophy_Shapes = findViewById(R.id.imgTrophy_Shapes);
         Button btnNext_Quiz_Shapes = findViewById(R.id.btnNext_Quiz_Shapes);
 
         fAuth = FirebaseAuth.getInstance();
@@ -48,12 +50,26 @@ public class ResultsShapes extends AppCompatActivity {
         score_shapes = getIntent().getIntExtra("RIGHT_ANSWER_COUNT_Shapes", 0);
         totalScoreLabel.setText(score_shapes + " / 5");
 
+        if (score_shapes == 0 || score_shapes == 1 || score_shapes == 2){
+            imgTrophy_Shapes.setImageResource(R.drawable.medal_good);
+            achievement_shapes = "Good";
+        }
+        if (score_shapes == 3 || score_shapes == 4){
+            imgTrophy_Shapes.setImageResource(R.drawable.medal_verygood);
+            achievement_shapes = "Very Good";
+        }
+        if (score_shapes == 5){
+            imgTrophy_Shapes.setImageResource(R.drawable.tropy_shapesmaster);
+            achievement_shapes = "Shapes Master";
+        }
+
         fStore.runTransaction(new Transaction.Function<Void>() {
             @Override
             public Void apply(@NonNull Transaction transaction) throws FirebaseFirestoreException {
                 DocumentSnapshot snapshot = transaction.get(docRef);
 
                 transaction.update(docRef, "shapes quiz score", score_shapes);
+                transaction.update(docRef, "shapes achievement", achievement_shapes);
                 return null;
             }
         });

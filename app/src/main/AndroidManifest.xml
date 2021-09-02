@@ -81,6 +81,9 @@
             android:name=".Homepage3to6"
             android:exported="true" />
         <activity
+            android:name=".Achievements3to6"
+            android:exported="true" />
+        <activity
             android:name=".ForgotPassword"
             android:exported="true" />
         <activity

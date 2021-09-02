@@ -24,14 +24,14 @@ public class CongratsPageShapes extends AppCompatActivity {
         btnReadLesson_Quiz_Shapes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent proceed = new Intent(CongratsPageShapes.this, CongratsPageShapes.class);
+                Intent proceed = new Intent(CongratsPageShapes.this, BasicConcepts.class);
                 startActivity(proceed);
             }
         });
         btnGoToHomepage_Quiz_Shapes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent proceed = new Intent(CongratsPageShapes.this, BasicConcepts.class);
+                Intent proceed = new Intent(CongratsPageShapes.this, Homepage3to6.class);
                 startActivity(proceed);
             }
         });
