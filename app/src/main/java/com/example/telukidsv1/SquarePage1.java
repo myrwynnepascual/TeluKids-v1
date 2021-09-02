@@ -67,6 +67,6 @@ public class SquarePage1 extends AppCompatActivity {
                     }
                 });
             }
-        },13000);
+        },12000);
     }
 }

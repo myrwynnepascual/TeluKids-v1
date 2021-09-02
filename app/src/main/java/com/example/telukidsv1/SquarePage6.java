@@ -62,8 +62,7 @@ public class SquarePage6 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        //TENTATIVE
-                        startActivity(new Intent(SquarePage6.this, ChooseModeShapes.class));
+                        startActivity(new Intent(SquarePage6.this, TrianglePage1.class));
 
                     }
                 });

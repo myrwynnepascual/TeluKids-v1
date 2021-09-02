@@ -17,8 +17,8 @@ import android.widget.VideoView;
 public class CirclePage1 extends AppCompatActivity {
     VideoView videoViewCPG1;
     TextView instructCPG1;
-    String videoPathCPG1,videoPathCPG12;
-    Uri uriCPG1,uriCPG12;
+    String videoPathCPG1;
+    Uri uriCPG1;
     ImageButton backbtnCPG1;
 
     @Override

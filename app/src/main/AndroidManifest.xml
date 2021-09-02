@@ -12,6 +12,96 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeluKidsV1">
         <activity
+            android:name=".DiamondPage6"
+            android:exported="true" />
+        <activity
+            android:name=".DiamondPage4"
+            android:exported="true" />
+        <activity
+            android:name=".DiamondPage3"
+            android:exported="true" />
+        <activity
+            android:name=".DiamondPage2"
+            android:exported="true" />
+        <activity
+            android:name=".DiamondPage1"
+            android:exported="true" />
+        <activity
+            android:name=".RectanglePage6"
+            android:exported="true" />
+        <activity
+            android:name=".RectanglePage5"
+            android:exported="true" />
+        <activity
+            android:name=".RectanglePage4"
+            android:exported="true" />
+        <activity
+            android:name=".RectanglePage3"
+            android:exported="true" />
+        <activity
+            android:name=".RectanglePage2"
+            android:exported="true" />
+        <activity
+            android:name=".RectanglePage1"
+            android:exported="true" />
+        <activity
+            android:name=".HeartPage6"
+            android:exported="true" />
+        <activity
+            android:name=".HeartPage5"
+            android:exported="true" />
+        <activity
+            android:name=".HeartPage4"
+            android:exported="true" />
+        <activity
+            android:name=".HeartPage3"
+            android:exported="true" />
+        <activity
+            android:name=".HeartPage2"
+            android:exported="true" />
+        <activity
+            android:name=".HeartPage1"
+            android:exported="true" />
+        <activity
+            android:name=".ShapesLessonCongrats"
+            android:exported="true" />
+        <activity
+            android:name=".StarPage6"
+            android:exported="true" />
+        <activity
+            android:name=".StarPage5"
+            android:exported="true" />
+        <activity
+            android:name=".StarPage4"
+            android:exported="true" />
+        <activity
+            android:name=".StarPage3"
+            android:exported="true" />
+        <activity
+            android:name=".StarPage2"
+            android:exported="true" />
+        <activity
+            android:name=".StarPage1"
+            android:exported="true" />
+        <activity
+            android:name=".TrianglePage6"
+            android:exported="true" />
+        <activity
+            android:name=".TrianglePage5"
+            android:exported="true" />
+        <activity
+            android:name=".TrianglePage4"
+            android:exported="true" />
+        <activity
+            android:name=".TrianglePage3"
+            android:exported="true" />
+        <activity
+            android:name=".TrianglePage2"
+            android:exported="true" />
+        <activity
+            android:name=".TrianglePage1"
+            android:exported="true" />
+        <activity
             android:name=".SquarePage6"
             android:exported="true" />
         <activity
