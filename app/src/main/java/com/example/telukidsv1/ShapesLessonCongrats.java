@@ -1,5 +1,6 @@
 package com.example.telukidsv1;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,11 +12,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.Transaction;
 
 public class ShapesLessonCongrats extends AppCompatActivity {
 
@@ -25,6 +28,7 @@ public class ShapesLessonCongrats extends AppCompatActivity {
 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
+    FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +40,21 @@ public class ShapesLessonCongrats extends AppCompatActivity {
         certificateSLC = findViewById(R.id.certificateSLC);
         btnassessmentSLC = findViewById(R.id.asessmentbtnSLC);
         btnhomepageSLC = findViewById(R.id.homepageSLC);
+
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+        user = fAuth.getCurrentUser();
+        DocumentReference docRef = fStore.collection("users").document(user.getUid());
+
+        fStore.runTransaction(new Transaction.Function<Void>() {
+            @Override
+            public Void apply(@NonNull Transaction transaction) throws FirebaseFirestoreException {
+                DocumentSnapshot snapshot = transaction.get(docRef);
+
+                transaction.update(docRef, "shapes lesson", "Completed");
+                return null;
+            }
+        });
 
         btnbackSLC.setOnClickListener(new View.OnClickListener() {
             @Override

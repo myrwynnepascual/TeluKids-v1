@@ -51,15 +51,15 @@ public class ResultsShapes extends AppCompatActivity {
         totalScoreLabel.setText(score_shapes + " / 5");
 
         if (score_shapes == 0 || score_shapes == 1 || score_shapes == 2){
-            imgTrophy_Shapes.setImageResource(R.drawable.medal_good);
-            achievement_shapes = "Good";
+            imgTrophy_Shapes.setImageResource(R.drawable.medal_good_rounded);
+            achievement_shapes = "Shapes Beginner";
         }
         if (score_shapes == 3 || score_shapes == 4){
-            imgTrophy_Shapes.setImageResource(R.drawable.medal_verygood);
-            achievement_shapes = "Very Good";
+            imgTrophy_Shapes.setImageResource(R.drawable.medal_verygood_rounded);
+            achievement_shapes = "Shapes Expert";
         }
         if (score_shapes == 5){
-            imgTrophy_Shapes.setImageResource(R.drawable.tropy_shapesmaster);
+            imgTrophy_Shapes.setImageResource(R.drawable.trophy_shapesmaster_rounded);
             achievement_shapes = "Shapes Master";
         }
 
