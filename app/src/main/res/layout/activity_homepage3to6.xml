@@ -12,15 +12,13 @@
         android:id="@+id/linearLayout1H36"
         android:layout_width="371dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024">
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.5">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,7 +28,7 @@
             <ImageButton
                 android:id="@+id/backbtnH36"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
                 android:contentDescription="@string/todo"
                 app:srcCompat="@drawable/subtnback"
@@ -38,7 +36,7 @@
 
             <Space
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
             <ImageButton
@@ -48,53 +46,42 @@
                 android:backgroundTint="#00FFFFFF"
                 android:contentDescription="@string/todo"
                 app:srcCompat="@drawable/ctgbtnprofile"
+                android:visibility="invisible"
                 tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
 
         </LinearLayout>
 
         <ImageView
             android:id="@+id/logoH36"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:contentDescription="@string/todo"
             app:srcCompat="@drawable/teluiconsmall" />
 
         <ImageView
             android:id="@+id/logotitleH36"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/txttelukidssmall"
+            app:srcCompat="@drawable/age36txttelukids"
             tools:ignore="ImageContrastCheck" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2H36"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginRight="52dp"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1H36"
-        app:layout_constraintVertical_bias="0.15">
 
         <ImageView
             android:id="@+id/todayH36"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
             android:contentDescription="@string/todo"
             app:srcCompat="@drawable/age36txttoday" />
 
         <ImageButton
             android:id="@+id/basicconceptsH36"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/todo"
             android:foregroundGravity="center_horizontal"
@@ -103,8 +90,9 @@
 
         <ImageButton
             android:id="@+id/gmrcH36"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/todo"
             android:foregroundGravity="center_horizontal"
@@ -113,14 +101,14 @@
 
         <ImageButton
             android:id="@+id/achivementsH36"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/todo"
             android:foregroundGravity="center_horizontal"
             app:srcCompat="@drawable/age36btnachieve"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

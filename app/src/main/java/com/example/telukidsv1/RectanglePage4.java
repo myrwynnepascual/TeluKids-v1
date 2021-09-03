@@ -17,10 +17,9 @@ import android.widget.VideoView;
 public class RectanglePage4 extends AppCompatActivity {
 
     VideoView videoViewRPG4;
-    TextView instructRPG4;
     String videoPathRPG4;
     Uri uriRPG4;
-    ImageButton backbtnRPG4;
+    ImageButton backbtnRPG4,nextbtnRPG4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,7 @@ public class RectanglePage4 extends AppCompatActivity {
 
         videoViewRPG4 = findViewById(R.id.videoRPG4);
         backbtnRPG4 = findViewById(R.id.btnbackRPG4);
-        instructRPG4 = findViewById(R.id.tapRPG4);
+        nextbtnRPG4 = findViewById(R.id.nextbtnRPG4);
 
         videoPathRPG4 = "android.resource://" + getPackageName() + "/" + R.raw.rectangle4;
         uriRPG4 = Uri.parse(videoPathRPG4);
@@ -57,9 +56,9 @@ public class RectanglePage4 extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                instructRPG4.setVisibility(VISIBLE);
+                nextbtnRPG4.setVisibility(VISIBLE);
 
-                videoViewRPG4.setOnClickListener(new View.OnClickListener() {
+                nextbtnRPG4.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 

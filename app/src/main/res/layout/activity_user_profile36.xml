@@ -12,15 +12,13 @@
         android:id="@+id/linearLayout1UP36"
         android:layout_width="371dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024">
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.5">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,7 +28,7 @@
             <ImageButton
                 android:id="@+id/backbtnUP36"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
                 android:contentDescription="@string/todo"
                 app:srcCompat="@drawable/subtnback"
@@ -38,7 +36,7 @@
 
             <Space
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
             <ImageButton
@@ -54,8 +52,8 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Space
@@ -91,41 +89,26 @@
 
         <ImageView
             android:id="@+id/usersettingsUP36"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:contentDescription="@string/todo"
             app:srcCompat="@drawable/proftxtprofile"
             tools:ignore="ImageContrastCheck" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout2UP36"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginRight="52dp"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1UP36"
-        app:layout_constraintVertical_bias="0">
-
 
         <ImageView
             android:id="@+id/usericonUP36"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/tigerprof" />
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/tigerprof"
+            android:visibility="invisible"/>
 
         <TextView
             android:id="@+id/greetingsUP36"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/leaguespartan_bold"
@@ -135,12 +118,13 @@
             android:shadowDy="1"
             android:shadowRadius="2"
             android:textColor="#E9724C"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
 
         <ImageButton
             android:id="@+id/editprofilebtnUP36"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/todo"
@@ -150,13 +134,15 @@
 
         <ImageButton
             android:id="@+id/logoutbtnUP36"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/todo"
             android:foregroundGravity="center_horizontal"
             app:srcCompat="@drawable/setbtnlogout"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

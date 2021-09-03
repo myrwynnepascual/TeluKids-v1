@@ -12,16 +12,13 @@
         android:id="@+id/linearLayout1LI"
         android:layout_width="371dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024">
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.5">
 
         <ImageButton
             android:id="@+id/backbtnLI"
@@ -34,41 +31,27 @@
 
         <ImageView
             android:id="@+id/logoLI"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:contentDescription="@string/todo"
             app:srcCompat="@drawable/teluiconsmall" />
 
         <ImageView
             android:id="@+id/logintitleSU"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:contentDescription="@string/todo"
             app:srcCompat="@drawable/sutxtlogin"
             tools:ignore="ImageContrastCheck" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2LI"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginRight="52dp"
-        android:layout_marginBottom="20dp"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1LI"
-        app:layout_constraintVertical_bias="0.023">
-
 
         <EditText
             android:id="@+id/emailaddressLI"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/lihdrusername"
             android:ems="10"
@@ -83,8 +66,9 @@
 
         <EditText
             android:id="@+id/passwordLI"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="5dp"
             android:background="@drawable/lihdrpwd"
             android:ems="10"
@@ -107,7 +91,7 @@
 
         <TextView
             android:id="@+id/errormsgLI"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/leaguespartan_bold"
             android:gravity="center_horizontal"
@@ -117,22 +101,16 @@
             android:shadowRadius="2"
             android:textColor="#E9724C" />
 
+        <ImageButton
+            android:id="@+id/loginbtnLI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/todo"
+            android:foregroundGravity="center_horizontal"
+            app:srcCompat="@drawable/libtnlogin"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
     </LinearLayout>
-
-    <ImageButton
-        android:id="@+id/loginbtnLI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#00FFFFFF"
-        android:contentDescription="@string/todo"
-        android:foregroundGravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2LI"
-        app:layout_constraintVertical_bias="0.035"
-        app:srcCompat="@drawable/libtnlogin"
-        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,8 +17,7 @@ import android.widget.VideoView;
 public class CirclePage5 extends AppCompatActivity {
 
     VideoView videoViewCPG5;
-    TextView tapCPG5;
-    ImageButton backCPG5;
+    ImageButton backCPG5,nextCPG5;
     String videoPathCPG5;
     Uri uriCPG5;
 
@@ -29,7 +28,7 @@ public class CirclePage5 extends AppCompatActivity {
 
         videoViewCPG5 = findViewById(R.id.videoCPG5);
         backCPG5 = findViewById(R.id.btnbackCPG5);
-        tapCPG5 = findViewById(R.id.tapCPG5);
+        nextCPG5 = findViewById(R.id.nextbtnCPG5);
 
         videoPathCPG5 = "android.resource://" + getPackageName() + "/" + R.raw.circle5;
         uriCPG5 = Uri.parse(videoPathCPG5);
@@ -56,9 +55,9 @@ public class CirclePage5 extends AppCompatActivity {
             @Override
             public void run() {
 
-                tapCPG5.setVisibility(VISIBLE);
+                nextCPG5.setVisibility(VISIBLE);
 
-                videoViewCPG5.setOnClickListener(new View.OnClickListener() {
+                nextCPG5.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 

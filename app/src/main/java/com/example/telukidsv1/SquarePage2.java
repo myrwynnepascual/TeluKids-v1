@@ -11,14 +11,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.VideoView;
 
 public class SquarePage2 extends AppCompatActivity {
 
     VideoView videoViewSPG2;
-    TextView tapSPG2;
-    ImageButton backSPG2;
+    ImageButton backSPG2,nextbtnSPG2;
     String videoPathSPG2;
     Uri uriSPG2;
 
@@ -29,7 +27,7 @@ public class SquarePage2 extends AppCompatActivity {
 
         videoViewSPG2 = findViewById(R.id.videoSPG2);
         backSPG2 = findViewById(R.id.btnbackSPG2);
-        tapSPG2 = findViewById(R.id.tapSPG2);
+        nextbtnSPG2 = findViewById(R.id.nextbtnSPG2);
 
         videoPathSPG2 = "android.resource://" + getPackageName() + "/" + R.raw.square2;
         uriSPG2 = Uri.parse(videoPathSPG2);
@@ -56,9 +54,9 @@ public class SquarePage2 extends AppCompatActivity {
             @Override
             public void run() {
 
-                tapSPG2.setVisibility(VISIBLE);
+                nextbtnSPG2.setVisibility(VISIBLE);
 
-                videoViewSPG2.setOnClickListener(new View.OnClickListener() {
+                nextbtnSPG2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 

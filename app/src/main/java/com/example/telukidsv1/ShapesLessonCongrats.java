@@ -59,7 +59,7 @@ public class ShapesLessonCongrats extends AppCompatActivity {
         btnbackSLC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(ShapesLessonCongrats.this, - .class));
+                startActivity(new Intent(ShapesLessonCongrats.this, BasicConcepts.class));
             }
         });
 

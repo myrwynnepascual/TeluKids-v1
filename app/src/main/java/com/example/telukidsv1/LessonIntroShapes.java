@@ -51,7 +51,7 @@ public class LessonIntroShapes extends AppCompatActivity {
             public void run() {
                 startActivity(new Intent(LessonIntroShapes.this, ChooseModeShapes.class));
             }
-        },60000);
+        },59000);
 
     }
 }

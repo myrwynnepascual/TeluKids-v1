@@ -69,6 +69,8 @@ public class Homepage3to6 extends AppCompatActivity {
                     btnUserProf36.setImageResource(R.drawable.chickensettings);
                 }
 
+                btnUserProf36.setVisibility(View.VISIBLE);
+
             }
         });
 

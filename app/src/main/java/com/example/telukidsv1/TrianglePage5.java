@@ -17,8 +17,7 @@ import android.widget.VideoView;
 public class TrianglePage5 extends AppCompatActivity {
 
     VideoView videoViewTPG5;
-    TextView tapTPG5;
-    ImageButton backTPG5;
+    ImageButton backTPG5,nextbtnTPG5;
     String videoPathTPG5;
     Uri uriTPG5;
 
@@ -29,7 +28,7 @@ public class TrianglePage5 extends AppCompatActivity {
 
         videoViewTPG5 = findViewById(R.id.videoTPG5);
         backTPG5 = findViewById(R.id.btnbackTPG5);
-        tapTPG5 = findViewById(R.id.tapTPG5);
+        nextbtnTPG5 = findViewById(R.id.nextbtnTPG5);
 
         videoPathTPG5 = "android.resource://" + getPackageName() + "/" + R.raw.triangle5;
         uriTPG5 = Uri.parse(videoPathTPG5);
@@ -56,9 +55,9 @@ public class TrianglePage5 extends AppCompatActivity {
             @Override
             public void run() {
 
-                tapTPG5.setVisibility(VISIBLE);
+                nextbtnTPG5.setVisibility(VISIBLE);
 
-                videoViewTPG5.setOnClickListener(new View.OnClickListener() {
+                nextbtnTPG5.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 

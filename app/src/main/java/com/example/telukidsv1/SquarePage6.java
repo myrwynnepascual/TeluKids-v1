@@ -17,8 +17,7 @@ import android.widget.VideoView;
 public class SquarePage6 extends AppCompatActivity {
 
     VideoView videoViewSPG6;
-    TextView tapSPG6;
-    ImageButton backSPG6;
+    ImageButton backSPG6,nextbtnSPG6;
     String videoPathSPG6;
     Uri uriSPG6;
 
@@ -29,7 +28,7 @@ public class SquarePage6 extends AppCompatActivity {
 
         videoViewSPG6 = findViewById(R.id.videoSPG6);
         backSPG6 = findViewById(R.id.btnbackSPG6);
-        tapSPG6 = findViewById(R.id.tapSPG6);
+        nextbtnSPG6 = findViewById(R.id.nextbtnSPG6);
 
         videoPathSPG6 = "android.resource://" + getPackageName() + "/" + R.raw.square6;
         uriSPG6 = Uri.parse(videoPathSPG6);
@@ -56,9 +55,9 @@ public class SquarePage6 extends AppCompatActivity {
             @Override
             public void run() {
 
-                tapSPG6.setVisibility(VISIBLE);
+                nextbtnSPG6.setVisibility(VISIBLE);
 
-                videoViewSPG6.setOnClickListener(new View.OnClickListener() {
+                nextbtnSPG6.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 

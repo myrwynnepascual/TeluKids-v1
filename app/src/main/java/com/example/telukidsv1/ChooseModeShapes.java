@@ -16,7 +16,7 @@ public class ChooseModeShapes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_mode_shapes);
 
-        backCMS = findViewById(R.id.backbtnCMS);
+        backCMS = findViewById(R.id.bconceptsbtnCMS);
         learnCMS = findViewById(R.id.learnCMS);
         assessCMS = findViewById(R.id.assessCMS);
         replayCMS = findViewById(R.id.replayintroCMS);

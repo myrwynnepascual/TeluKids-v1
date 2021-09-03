@@ -17,8 +17,7 @@ import android.widget.VideoView;
 public class StarPage2 extends AppCompatActivity {
 
     VideoView videoViewSTPG2 ;
-    TextView tapSTPG2 ;
-    ImageButton backSTPG2 ;
+    ImageButton backSTPG2,nextbtnSTPG2  ;
     String videoPathSTPG2 ;
     Uri uriSTPG2 ;
 
@@ -29,7 +28,7 @@ public class StarPage2 extends AppCompatActivity {
 
         videoViewSTPG2  = findViewById(R.id.videoSTPG2 );
         backSTPG2  = findViewById(R.id.btnbackSTPG2 );
-        tapSTPG2  = findViewById(R.id.tapSTPG2 );
+        nextbtnSTPG2  = findViewById(R.id.nextbtnSTPG2 );
 
         videoPathSTPG2  = "android.resource://" + getPackageName() + "/" + R.raw.star2;
         uriSTPG2  = Uri.parse(videoPathSTPG2 );
@@ -56,9 +55,9 @@ public class StarPage2 extends AppCompatActivity {
             @Override
             public void run() {
 
-                tapSTPG2 .setVisibility(VISIBLE);
+                nextbtnSTPG2 .setVisibility(VISIBLE);
 
-                videoViewSTPG2 .setOnClickListener(new View.OnClickListener() {
+                nextbtnSTPG2 .setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 

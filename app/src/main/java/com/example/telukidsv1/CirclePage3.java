@@ -18,7 +18,7 @@ public class CirclePage3 extends AppCompatActivity {
 
     VideoView videoViewCPG3;
     TextView tapCPG3;
-    ImageButton backCPG3;
+    ImageButton backCPG3,nextCPG3;
     String videoPathCPG3;
     Uri uriCPG3;
 
@@ -29,7 +29,7 @@ public class CirclePage3 extends AppCompatActivity {
 
         videoViewCPG3 = findViewById(R.id.videoCPG3);
         backCPG3 = findViewById(R.id.btnbackCPG3);
-        tapCPG3 = findViewById(R.id.tapCPG3);
+        nextCPG3 = findViewById(R.id.nextbtnCPG3);
 
         videoPathCPG3 = "android.resource://" + getPackageName() + "/" + R.raw.circle3;
         uriCPG3 = Uri.parse(videoPathCPG3);
@@ -56,9 +56,9 @@ public class CirclePage3 extends AppCompatActivity {
             @Override
             public void run() {
 
-                tapCPG3.setVisibility(VISIBLE);
+                nextCPG3.setVisibility(VISIBLE);
 
-                videoViewCPG3.setOnClickListener(new View.OnClickListener() {
+                nextCPG3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 

@@ -15,11 +15,11 @@ import android.widget.TextView;
 import android.widget.VideoView;
 
 public class CirclePage1 extends AppCompatActivity {
+
     VideoView videoViewCPG1;
-    TextView instructCPG1;
     String videoPathCPG1;
     Uri uriCPG1;
-    ImageButton backbtnCPG1;
+    ImageButton backbtnCPG1,nextbtnCPG1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class CirclePage1 extends AppCompatActivity {
 
         videoViewCPG1 = findViewById(R.id.videoCPG1);
         backbtnCPG1 = findViewById(R.id.btnbackCPG1);
-        instructCPG1 = findViewById(R.id.tapCPG1);
+        nextbtnCPG1 = findViewById(R.id.nextbtnCPG1);
 
         videoPathCPG1 = "android.resource://" + getPackageName() + "/" + R.raw.circle1;
         uriCPG1 = Uri.parse(videoPathCPG1);
@@ -56,9 +56,10 @@ public class CirclePage1 extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                instructCPG1.setVisibility(VISIBLE);
 
-                videoViewCPG1.setOnClickListener(new View.OnClickListener() {
+                nextbtnCPG1.setVisibility(VISIBLE);
+
+                nextbtnCPG1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 

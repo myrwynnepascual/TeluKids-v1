@@ -17,10 +17,9 @@ import android.widget.VideoView;
 public class RectanglePage6 extends AppCompatActivity {
 
     VideoView videoViewRPG6;
-    TextView instructRPG6;
     String videoPathRPG6;
     Uri uriRPG6;
-    ImageButton backbtnRPG6;
+    ImageButton backbtnRPG6,nextbtnRPG6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,7 @@ public class RectanglePage6 extends AppCompatActivity {
 
         videoViewRPG6 = findViewById(R.id.videoRPG6);
         backbtnRPG6 = findViewById(R.id.btnbackRPG6);
-        instructRPG6 = findViewById(R.id.tapRPG6);
+        nextbtnRPG6 = findViewById(R.id.nextbtnRPG6);
 
         videoPathRPG6 = "android.resource://" + getPackageName() + "/" + R.raw.rectangle6;
         uriRPG6 = Uri.parse(videoPathRPG6);
@@ -57,17 +56,17 @@ public class RectanglePage6 extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                instructRPG6.setVisibility(VISIBLE);
+                nextbtnRPG6.setVisibility(VISIBLE);
 
-                videoViewRPG6.setOnClickListener(new View.OnClickListener() {
+                nextbtnRPG6.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        startActivity(new Intent(RectanglePage6.this,ShapesLessonCongrats.class));
+                        startActivity(new Intent(RectanglePage6.this,DiamondPage1.class));
 
                     }
                 });
             }
-        },3000);
+        },4000);
     }
 }

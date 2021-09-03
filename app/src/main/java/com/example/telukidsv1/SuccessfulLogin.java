@@ -43,6 +43,7 @@ public class SuccessfulLogin extends AppCompatActivity {
 
                 if(usericon.equalsIgnoreCase("tiger")){
                     profIconSSL.setImageResource(R.drawable.slitiger);
+
                 }
                 else if(usericon.equalsIgnoreCase("owl")){
                     profIconSSL.setImageResource(R.drawable.sliowl);
@@ -66,6 +67,8 @@ public class SuccessfulLogin extends AppCompatActivity {
                     profIconSSL.setImageResource(R.drawable.slichicken);
                 }
 
+                profIconSSL.setVisibility(View.VISIBLE);
+
             }
         });
 
@@ -76,6 +79,6 @@ public class SuccessfulLogin extends AppCompatActivity {
                 startActivity(new Intent(SuccessfulLogin.this,CategorySelection.class));
                 finish();
             }
-        },5000);
+        },3000);
     }
 }

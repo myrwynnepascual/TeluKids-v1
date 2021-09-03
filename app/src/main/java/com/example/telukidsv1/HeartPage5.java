@@ -17,10 +17,9 @@ import android.widget.VideoView;
 public class HeartPage5 extends AppCompatActivity {
 
     VideoView videoViewHPG5;
-    TextView instructHPG5;
     String videoPathHPG5;
     Uri uriHPG5;
-    ImageButton backbtnHPG5;
+    ImageButton backbtnHPG5,nextbtnHPG5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,7 @@ public class HeartPage5 extends AppCompatActivity {
 
         videoViewHPG5 = findViewById(R.id.videoHPG5);
         backbtnHPG5 = findViewById(R.id.btnbackHPG5);
-        instructHPG5 = findViewById(R.id.tapHPG5);
+        nextbtnHPG5 = findViewById(R.id.nextbtnHPG5);
 
         videoPathHPG5 = "android.resource://" + getPackageName() + "/" + R.raw.heart5;
         uriHPG5 = Uri.parse(videoPathHPG5);
@@ -57,9 +56,9 @@ public class HeartPage5 extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                instructHPG5.setVisibility(VISIBLE);
+                nextbtnHPG5.setVisibility(VISIBLE);
 
-                videoViewHPG5.setOnClickListener(new View.OnClickListener() {
+                nextbtnHPG5.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
@@ -68,6 +67,6 @@ public class HeartPage5 extends AppCompatActivity {
                     }
                 });
             }
-        },3000);
+        },4000);
     }
 }

@@ -17,10 +17,9 @@ import android.widget.VideoView;
 public class DiamondPage5 extends AppCompatActivity {
 
     VideoView videoViewDPG5;
-    TextView instructDPG5;
     String videoPathDPG5;
     Uri uriDPG5;
-    ImageButton backbtnDPG5;
+    ImageButton backbtnDPG5, nextbtnDPG5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,7 @@ public class DiamondPage5 extends AppCompatActivity {
 
         videoViewDPG5 = findViewById(R.id.videoDPG5);
         backbtnDPG5 = findViewById(R.id.btnbackDPG5);
-        instructDPG5 = findViewById(R.id.tapDPG5);
+        nextbtnDPG5 = findViewById(R.id.nextbtnDPG5);
 
         videoPathDPG5 = "android.resource://" + getPackageName() + "/" + R.raw.diamond5;
         uriDPG5 = Uri.parse(videoPathDPG5);
@@ -57,9 +56,9 @@ public class DiamondPage5 extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                instructDPG5.setVisibility(VISIBLE);
+                nextbtnDPG5.setVisibility(VISIBLE);
 
-                videoViewDPG5.setOnClickListener(new View.OnClickListener() {
+                nextbtnDPG5.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
@@ -68,6 +67,6 @@ public class DiamondPage5 extends AppCompatActivity {
                     }
                 });
             }
-        },3000);
+        },4000);
     }
 }

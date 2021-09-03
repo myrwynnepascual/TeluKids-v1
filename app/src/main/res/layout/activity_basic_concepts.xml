@@ -12,20 +12,18 @@
         android:id="@+id/linearLayout1BC"
         android:layout_width="371dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024">
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.5">
 
         <ImageButton
             android:id="@+id/btnbackBConcepts"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/todo"
             app:srcCompat="@drawable/subtnback"
@@ -33,42 +31,36 @@
 
         <ImageView
             android:id="@+id/logoBC"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:contentDescription="@string/todo"
             app:srcCompat="@drawable/teluiconsmall" />
 
         <ImageView
+            android:id="@+id/bconceptstxtBC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/bcptxttelukids"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
             android:id="@+id/choosetopictxtBC"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:contentDescription="@string/todo"
             app:srcCompat="@drawable/bcpchoosetopictxt"
             tools:ignore="ImageContrastCheck" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2BC"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginRight="52dp"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1BC"
-        app:layout_constraintVertical_bias="0.0">
-
 
         <ImageButton
             android:id="@+id/btnColors"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/todo"
             android:foregroundGravity="center_horizontal"
@@ -77,24 +69,25 @@
 
         <ImageButton
             android:id="@+id/btnNumbers"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/todo"
             android:foregroundGravity="center_horizontal"
-            app:srcCompat="@drawable/bcpbtnnum"
+            app:srcCompat="@drawable/bcpbtnnumbers"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
         <ImageButton
             android:id="@+id/btnShapes"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:backgroundTint="#00FFFFFF"
             android:contentDescription="@string/todo"
             android:foregroundGravity="center_horizontal"
             app:srcCompat="@drawable/bcpbtnshapes"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

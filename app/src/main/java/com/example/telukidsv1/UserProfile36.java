@@ -74,6 +74,7 @@ public class UserProfile36 extends AppCompatActivity {
                     profIconUP.setImageResource(R.drawable.chickenprof);
                 }
 
+                profIconUP.setVisibility(View.VISIBLE);
                 greetUP.setText("Hi, " +username + "!");
 
             }

@@ -17,8 +17,7 @@ import android.widget.VideoView;
 public class SquarePage3 extends AppCompatActivity {
 
     VideoView videoViewSPG3;
-    TextView tapSPG3;
-    ImageButton backSPG3;
+    ImageButton backSPG3,nextbtnSPG3;;
     String videoPathSPG3;
     Uri uriSPG3;
 
@@ -29,7 +28,7 @@ public class SquarePage3 extends AppCompatActivity {
 
         videoViewSPG3 = findViewById(R.id.videoSPG3);
         backSPG3 = findViewById(R.id.btnbackSPG3);
-        tapSPG3 = findViewById(R.id.tapSPG3);
+        nextbtnSPG3 = findViewById(R.id.nextbtnSPG3);
 
         videoPathSPG3 = "android.resource://" + getPackageName() + "/" + R.raw.square3;
         uriSPG3 = Uri.parse(videoPathSPG3);
@@ -56,9 +55,9 @@ public class SquarePage3 extends AppCompatActivity {
             @Override
             public void run() {
 
-                tapSPG3.setVisibility(VISIBLE);
+                nextbtnSPG3.setVisibility(VISIBLE);
 
-                videoViewSPG3.setOnClickListener(new View.OnClickListener() {
+                nextbtnSPG3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 

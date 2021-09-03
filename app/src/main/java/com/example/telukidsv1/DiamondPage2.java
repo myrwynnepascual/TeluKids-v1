@@ -17,10 +17,9 @@ import android.widget.VideoView;
 public class DiamondPage2 extends AppCompatActivity {
 
     VideoView videoViewDPG2;
-    TextView instructDPG2;
     String videoPathDPG2;
     Uri uriDPG2;
-    ImageButton backbtnDPG2;
+    ImageButton backbtnDPG2,nextDPG2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,7 @@ public class DiamondPage2 extends AppCompatActivity {
 
         videoViewDPG2 = findViewById(R.id.videoDPG2);
         backbtnDPG2 = findViewById(R.id.btnbackDPG2);
-        instructDPG2 = findViewById(R.id.tapDPG2);
+        nextDPG2 = findViewById(R.id.nextbtnDPG2);
 
         videoPathDPG2 = "android.resource://" + getPackageName() + "/" + R.raw.diamond2;
         uriDPG2 = Uri.parse(videoPathDPG2);
@@ -57,9 +56,9 @@ public class DiamondPage2 extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                instructDPG2.setVisibility(VISIBLE);
+                nextDPG2.setVisibility(VISIBLE);
 
-                videoViewDPG2.setOnClickListener(new View.OnClickListener() {
+                nextDPG2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
