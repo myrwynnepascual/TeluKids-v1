@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -34,12 +35,19 @@ public class CirclePage6 extends AppCompatActivity {
         uriCPG6 = Uri.parse(videoPathCPG6);
         videoViewCPG6.setVideoURI(uriCPG6);
 
+        MediaController mediaController= new MediaController(this);
+        videoViewCPG6.setMediaController(mediaController);
+        mediaController.setVisibility(View.GONE);
+        mediaController.setAnchorView(videoViewCPG6);
+
         videoViewCPG6.start();
 
-        videoViewCPG6.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        videoViewCPG6.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
+            public void onCompletion(MediaPlayer mp) {
+
+                startActivity(new Intent(CirclePage6.this, SquarePage1.class));
+
             }
         });
 
@@ -50,22 +58,13 @@ public class CirclePage6 extends AppCompatActivity {
             }
         });
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        nextCPG6.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
+            public void onClick(View v) {
 
-                nextCPG6.setVisibility(VISIBLE);
+                startActivity(new Intent(CirclePage6.this, SquarePage1.class));
 
-                nextCPG6.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        startActivity(new Intent(CirclePage6.this, SquarePage1.class));
-
-                    }
-                });
             }
-        },3000);
+        });
     }
 }

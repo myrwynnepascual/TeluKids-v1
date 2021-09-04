@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -34,38 +35,37 @@ public class StarPage6 extends AppCompatActivity {
         uriSTPG6  = Uri.parse(videoPathSTPG6 );
         videoViewSTPG6 .setVideoURI(uriSTPG6 );
 
+        MediaController mediaController= new MediaController(this);
+        videoViewSTPG6.setMediaController(mediaController);
+        mediaController.setVisibility(View.GONE);
+        mediaController.setAnchorView(videoViewSTPG6);
+
         videoViewSTPG6 .start();
 
-        videoViewSTPG6 .setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        videoViewSTPG6.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
+            public void onCompletion(MediaPlayer mp) {
+
+                startActivity(new Intent(StarPage6.this, HeartPage1.class));
+
             }
         });
 
         backSTPG6 .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(StarPage6.this,StarPage5.class));
             }
         });
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        nextbtnSTPG6 .setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
+            public void onClick(View v) {
 
-                nextbtnSTPG6 .setVisibility(VISIBLE);
+                startActivity(new Intent(StarPage6.this, HeartPage1.class));
 
-                nextbtnSTPG6 .setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        startActivity(new Intent(StarPage6.this, HeartPage1.class));
-
-                    }
-                });
             }
-        },4000);
+        });
     }
 }

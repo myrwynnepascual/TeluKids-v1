@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -19,7 +20,7 @@ public class DiamondPage4 extends AppCompatActivity {
     VideoView videoViewDPG4;
     String videoPathDPG4;
     Uri uriDPG4;
-    ImageButton backbtnDPG4, nextbtnDPG4;
+    ImageButton backbtnDPG4,nextDPG4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,18 +29,25 @@ public class DiamondPage4 extends AppCompatActivity {
 
         videoViewDPG4 = findViewById(R.id.videoDPG4);
         backbtnDPG4 = findViewById(R.id.btnbackDPG4);
-        nextbtnDPG4 = findViewById(R.id.nextbtnDPG4);
+        nextDPG4 = findViewById(R.id.nextbtnDPG4);
 
         videoPathDPG4 = "android.resource://" + getPackageName() + "/" + R.raw.diamond4;
         uriDPG4 = Uri.parse(videoPathDPG4);
         videoViewDPG4.setVideoURI(uriDPG4);
 
+        MediaController mediaController= new MediaController(this);
+        videoViewDPG4.setMediaController(mediaController);
+        mediaController.setVisibility(View.GONE);
+        mediaController.setAnchorView(videoViewDPG4);
+
         videoViewDPG4.start();
 
-        videoViewDPG4.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        videoViewDPG4.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
+            public void onCompletion(MediaPlayer mp) {
+
+                startActivity(new Intent(DiamondPage4.this, DiamondPage5.class));
+
             }
         });
 
@@ -52,21 +60,13 @@ public class DiamondPage4 extends AppCompatActivity {
             }
         });
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        nextDPG4.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                nextbtnDPG4.setVisibility(VISIBLE);
+            public void onClick(View v) {
 
-                nextbtnDPG4.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+                startActivity(new Intent(DiamondPage4.this, DiamondPage5.class));
 
-                        startActivity(new Intent(DiamondPage4.this, DiamondPage5.class));
-
-                    }
-                });
             }
-        },3000);
+        });
     }
 }

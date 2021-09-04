@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -34,12 +35,19 @@ public class HeartPage1 extends AppCompatActivity {
         uriHPG1 = Uri.parse(videoPathHPG1);
         videoViewHPG1.setVideoURI(uriHPG1);
 
+        MediaController mediaController= new MediaController(this);
+        videoViewHPG1.setMediaController(mediaController);
+        mediaController.setVisibility(View.GONE);
+        mediaController.setAnchorView(videoViewHPG1);
+
         videoViewHPG1.start();
 
-        videoViewHPG1.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        videoViewHPG1.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
+            public void onCompletion(MediaPlayer mp) {
+
+                startActivity(new Intent(HeartPage1.this,HeartPage2.class));
+
             }
         });
 
@@ -52,21 +60,13 @@ public class HeartPage1 extends AppCompatActivity {
             }
         });
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        nextbtnHPG1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                nextbtnHPG1.setVisibility(VISIBLE);
+            public void onClick(View v) {
 
-                nextbtnHPG1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+                startActivity(new Intent(HeartPage1.this, HeartPage2.class));
 
-                        startActivity(new Intent(HeartPage1.this, HeartPage2.class));
-
-                    }
-                });
             }
-        },9000);
+        });
     }
 }

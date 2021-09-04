@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -34,12 +35,19 @@ public class SquarePage5 extends AppCompatActivity {
         uriSPG5 = Uri.parse(videoPathSPG5);
         videoViewSPG5.setVideoURI(uriSPG5);
 
+        MediaController mediaController= new MediaController(this);
+        videoViewSPG5.setMediaController(mediaController);
+        mediaController.setVisibility(View.GONE);
+        mediaController.setAnchorView(videoViewSPG5);
+
         videoViewSPG5.start();
 
-        videoViewSPG5.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        videoViewSPG5.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
+            public void onCompletion(MediaPlayer mp) {
+
+                startActivity(new Intent(SquarePage5.this,SquarePage6.class));
+
             }
         });
 
@@ -50,22 +58,13 @@ public class SquarePage5 extends AppCompatActivity {
             }
         });
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        nextbtnSPG5.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
+            public void onClick(View v) {
 
-                nextbtnSPG5.setVisibility(VISIBLE);
+                startActivity(new Intent(SquarePage5.this, SquarePage6.class));
 
-                nextbtnSPG5.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        startActivity(new Intent(SquarePage5.this, SquarePage6.class));
-
-                    }
-                });
             }
-        },3000);
+        });
     }
 }

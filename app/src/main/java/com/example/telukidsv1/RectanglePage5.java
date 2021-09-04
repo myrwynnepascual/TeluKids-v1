@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -34,12 +35,19 @@ public class RectanglePage5 extends AppCompatActivity {
         uriRPG5 = Uri.parse(videoPathRPG5);
         videoViewRPG5.setVideoURI(uriRPG5);
 
+        MediaController mediaController= new MediaController(this);
+        videoViewRPG5.setMediaController(mediaController);
+        mediaController.setVisibility(View.GONE);
+        mediaController.setAnchorView(videoViewRPG5);
+
         videoViewRPG5.start();
 
-        videoViewRPG5.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        videoViewRPG5.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
+            public void onCompletion(MediaPlayer mp) {
+
+                startActivity(new Intent(RectanglePage5.this, RectanglePage6.class));
+
             }
         });
 
@@ -52,21 +60,13 @@ public class RectanglePage5 extends AppCompatActivity {
             }
         });
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        nextbtnRPG5.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                nextbtnRPG5.setVisibility(VISIBLE);
+            public void onClick(View v) {
 
-                nextbtnRPG5.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+                startActivity(new Intent(RectanglePage5.this, RectanglePage6.class));
 
-                        startActivity(new Intent(RectanglePage5.this, RectanglePage6.class));
-
-                    }
-                });
             }
-        },3000);
+        });
     }
 }

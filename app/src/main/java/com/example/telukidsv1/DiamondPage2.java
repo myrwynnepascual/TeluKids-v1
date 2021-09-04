@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -34,12 +35,19 @@ public class DiamondPage2 extends AppCompatActivity {
         uriDPG2 = Uri.parse(videoPathDPG2);
         videoViewDPG2.setVideoURI(uriDPG2);
 
+        MediaController mediaController= new MediaController(this);
+        videoViewDPG2.setMediaController(mediaController);
+        mediaController.setVisibility(View.GONE);
+        mediaController.setAnchorView(videoViewDPG2);
+
         videoViewDPG2.start();
 
-        videoViewDPG2.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        videoViewDPG2.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
+            public void onCompletion(MediaPlayer mp) {
+
+                startActivity(new Intent(DiamondPage2.this, DiamondPage3.class));
+
             }
         });
 
@@ -52,21 +60,13 @@ public class DiamondPage2 extends AppCompatActivity {
             }
         });
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        nextDPG2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                nextDPG2.setVisibility(VISIBLE);
+            public void onClick(View v) {
 
-                nextDPG2.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+                startActivity(new Intent(DiamondPage2.this, DiamondPage3.class));
 
-                        startActivity(new Intent(DiamondPage2.this, DiamondPage3.class));
-
-                    }
-                });
             }
-        },3000);
+        });
     }
 }

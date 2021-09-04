@@ -15,6 +15,9 @@
             android:name=".DiamondPage6"
             android:exported="true" />
         <activity
+            android:name=".DiamondPage5"
+            android:exported="true" />
+        <activity
             android:name=".DiamondPage4"
             android:exported="true" />
         <activity

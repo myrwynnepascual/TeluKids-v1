@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -34,12 +35,19 @@ public class TrianglePage4 extends AppCompatActivity {
         uriTPG4 = Uri.parse(videoPathTPG4);
         videoViewTPG4.setVideoURI(uriTPG4);
 
+        MediaController mediaController= new MediaController(this);
+        videoViewTPG4.setMediaController(mediaController);
+        mediaController.setVisibility(View.GONE);
+        mediaController.setAnchorView(videoViewTPG4);
+
         videoViewTPG4.start();
 
-        videoViewTPG4.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        videoViewTPG4.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
+            public void onCompletion(MediaPlayer mp) {
+
+                startActivity(new Intent(TrianglePage4.this,TrianglePage5.class));
+
             }
         });
 
@@ -50,22 +58,13 @@ public class TrianglePage4 extends AppCompatActivity {
             }
         });
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        nextbtnTPG4.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
+            public void onClick(View v) {
 
-                nextbtnTPG4.setVisibility(VISIBLE);
+                startActivity(new Intent(TrianglePage4.this, TrianglePage5.class));
 
-                nextbtnTPG4.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        startActivity(new Intent(TrianglePage4.this, TrianglePage5.class));
-
-                    }
-                });
             }
-        },3000);
+        });
     }
 }

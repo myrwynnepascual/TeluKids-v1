@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -35,39 +36,38 @@ public class CirclePage3 extends AppCompatActivity {
         uriCPG3 = Uri.parse(videoPathCPG3);
         videoViewCPG3.setVideoURI(uriCPG3);
 
+        MediaController mediaController= new MediaController(this);
+        videoViewCPG3.setMediaController(mediaController);
+        mediaController.setVisibility(View.GONE);
+        mediaController.setAnchorView(videoViewCPG3);
+
         videoViewCPG3.start();
 
-        videoViewCPG3.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        videoViewCPG3.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
+            public void onCompletion(MediaPlayer mp) {
+
+                startActivity(new Intent(CirclePage3.this, CirclePage4.class));
+
             }
         });
 
         backCPG3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(CirclePage3.this,CirclePage2.class));
+
             }
         });
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        nextCPG3.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
+            public void onClick(View v) {
 
-                nextCPG3.setVisibility(VISIBLE);
+                startActivity(new Intent(CirclePage3.this, CirclePage4.class));
 
-                nextCPG3.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        startActivity(new Intent(CirclePage3.this, CirclePage4.class));
-
-                    }
-                });
             }
-        },3000);
-
+        });
     }
 }

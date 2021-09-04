@@ -11,13 +11,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
 public class SquarePage3 extends AppCompatActivity {
 
     VideoView videoViewSPG3;
-    ImageButton backSPG3,nextbtnSPG3;;
+    ImageButton backSPG3,nextbtnSPG3;
     String videoPathSPG3;
     Uri uriSPG3;
 
@@ -34,12 +35,19 @@ public class SquarePage3 extends AppCompatActivity {
         uriSPG3 = Uri.parse(videoPathSPG3);
         videoViewSPG3.setVideoURI(uriSPG3);
 
+        MediaController mediaController= new MediaController(this);
+        videoViewSPG3.setMediaController(mediaController);
+        mediaController.setVisibility(View.GONE);
+        mediaController.setAnchorView(videoViewSPG3);
+
         videoViewSPG3.start();
 
-        videoViewSPG3.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        videoViewSPG3.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
+            public void onCompletion(MediaPlayer mp) {
+
+                startActivity(new Intent(SquarePage3.this,SquarePage4.class));
+
             }
         });
 
@@ -50,22 +58,13 @@ public class SquarePage3 extends AppCompatActivity {
             }
         });
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        nextbtnSPG3.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
+            public void onClick(View v) {
 
-                nextbtnSPG3.setVisibility(VISIBLE);
+                startActivity(new Intent(SquarePage3.this, SquarePage4.class));
 
-                nextbtnSPG3.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        startActivity(new Intent(SquarePage3.this, SquarePage4.class));
-
-                    }
-                });
             }
-        },3000);
+        });
     }
 }

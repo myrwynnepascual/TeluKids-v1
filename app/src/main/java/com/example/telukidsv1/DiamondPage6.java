@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 public class DiamondPage6 extends AppCompatActivity {
@@ -18,7 +19,7 @@ public class DiamondPage6 extends AppCompatActivity {
     VideoView videoViewDPG6;
     String videoPathDPG6;
     Uri uriDPG6;
-    ImageButton backbtnDPG6, nextbtnDPG6;
+    ImageButton backbtnDPG6,nextDPG6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,18 +28,25 @@ public class DiamondPage6 extends AppCompatActivity {
 
         videoViewDPG6 = findViewById(R.id.videoDPG6);
         backbtnDPG6 = findViewById(R.id.btnbackDPG6);
-        nextbtnDPG6 = findViewById(R.id.nextbtnDPG6);
+        nextDPG6 = findViewById(R.id.nextbtnDPG6);
 
         videoPathDPG6 = "android.resource://" + getPackageName() + "/" + R.raw.diamond6;
         uriDPG6 = Uri.parse(videoPathDPG6);
         videoViewDPG6.setVideoURI(uriDPG6);
 
+        MediaController mediaController= new MediaController(this);
+        videoViewDPG6.setMediaController(mediaController);
+        mediaController.setVisibility(View.GONE);
+        mediaController.setAnchorView(videoViewDPG6);
+
         videoViewDPG6.start();
 
-        videoViewDPG6.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        videoViewDPG6.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
+            public void onCompletion(MediaPlayer mp) {
+
+                startActivity(new Intent(DiamondPage6.this, ShapesLessonCongrats.class));
+
             }
         });
 
@@ -51,21 +59,13 @@ public class DiamondPage6 extends AppCompatActivity {
             }
         });
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        nextDPG6.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                nextbtnDPG6.setVisibility(VISIBLE);
+            public void onClick(View v) {
 
-                nextbtnDPG6.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+                startActivity(new Intent(DiamondPage6.this, ShapesLessonCongrats.class));
 
-                        startActivity(new Intent(DiamondPage6.this, ShapesLessonCongrats.class));
-
-                    }
-                });
             }
-        },4000);
+        });
     }
 }

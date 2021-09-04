@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -20,6 +21,7 @@ public class CirclePage1 extends AppCompatActivity {
     String videoPathCPG1;
     Uri uriCPG1;
     ImageButton backbtnCPG1,nextbtnCPG1;
+    MediaController mediaController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +36,19 @@ public class CirclePage1 extends AppCompatActivity {
         uriCPG1 = Uri.parse(videoPathCPG1);
         videoViewCPG1.setVideoURI(uriCPG1);
 
+        mediaController = new MediaController(this);
+        videoViewCPG1.setMediaController(mediaController);
+        mediaController.setVisibility(View.GONE);
+        mediaController.setAnchorView(videoViewCPG1);
+
         videoViewCPG1.start();
 
-        videoViewCPG1.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        videoViewCPG1.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
+            public void onCompletion(MediaPlayer mp) {
+
+                startActivity(new Intent(CirclePage1.this, CirclePage2.class));
+
             }
         });
 
@@ -52,22 +61,13 @@ public class CirclePage1 extends AppCompatActivity {
             }
         });
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        nextbtnCPG1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
+            public void onClick(View v) {
 
-                nextbtnCPG1.setVisibility(VISIBLE);
+                startActivity(new Intent(CirclePage1.this, CirclePage2.class));
 
-                nextbtnCPG1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        startActivity(new Intent(CirclePage1.this, CirclePage2.class));
-
-                    }
-                });
             }
-        },13000);
+        });
     }
 }
