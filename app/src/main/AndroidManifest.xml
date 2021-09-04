@@ -12,6 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeluKidsV1">
         <activity
+            android:name=".ChooseModeColors"
+            android:exported="true" />
+        <activity
+            android:name=".LessonIntroColors"
+            android:exported="true" />
+        <activity
+            android:name=".ChooseModeCounting"
+            android:exported="true" />
+        <activity
+            android:name=".LessonIntroCounting"
+            android:exported="true" />
+        <activity
+            android:name=".Numbers"
+            android:exported="true" />
+        <activity
             android:name=".DiamondPage6"
             android:exported="true" />
         <activity

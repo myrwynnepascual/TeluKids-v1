@@ -5,6 +5,7 @@ import static android.view.View.VISIBLE;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -41,17 +42,20 @@ public class LessonIntroShapes extends AppCompatActivity {
         videoViewIS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(LessonIntroShapes.this,ChooseModeShapes.class));
+
             }
         });
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        videoViewIS.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void run() {
-                startActivity(new Intent(LessonIntroShapes.this, ChooseModeShapes.class));
+            public void onCompletion(MediaPlayer mp) {
+
+                startActivity(new Intent(LessonIntroShapes.this,ChooseModeShapes.class));
+
             }
-        },59000);
+        });
 
     }
 }

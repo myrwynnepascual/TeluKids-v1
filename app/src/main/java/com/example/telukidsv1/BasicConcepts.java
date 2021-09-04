@@ -32,13 +32,13 @@ public class BasicConcepts extends AppCompatActivity {
         btnColors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(BasicConcepts.this, LessonIntroColors.class));
+                startActivity(new Intent(BasicConcepts.this, LessonIntroColors.class));
             }
         });
         btnNumbers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(BasicConcepts.this, LessonIntroNumbers.class));
+                startActivity(new Intent(BasicConcepts.this, Numbers.class));
             }
         });
         btnShapes.setOnClickListener(new View.OnClickListener() {

@@ -15,6 +15,8 @@
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/achievements_ages36.xml" value="0.14144736842105263" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_basic_concepts.xml" value="0.25" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_category_selection.xml" value="0.1417763157894737" />
+        <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_choose_mode_colors.xml" value="0.2444078947368421" />
+        <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_choose_mode_counting.xml" value="0.18271857923497267" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_choose_mode_shapes.xml" value="0.33" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_circle_page1.xml" value="0.2312158469945355" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_circle_page11.xml" value="0.11816939890710383" />
@@ -41,8 +43,11 @@
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_heart_page6.xml" value="0.1" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_homepage3to6.xml" value="0.2312158469945355" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_homepage7to9.xml" value="0.2312158469945355" />
+        <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_lesson_intro_colors.xml" value="0.18271857923497267" />
+        <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_lesson_intro_counting.xml" value="0.18271857923497267" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_lesson_intro_shapes.xml" value="0.1" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_numbers.xml" value="0.2444078947368421" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_rectangle_page1.xml" value="0.1" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_rectangle_page2.xml" value="0.1" />
         <entry key="..\:/TeluKids-v1/app/src/main/res/layout/activity_rectangle_page3.xml" value="0.1" />
